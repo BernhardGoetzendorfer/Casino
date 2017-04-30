@@ -1,0 +1,1141 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Timers;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Animation;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+using System.Windows.Threading;
+using Datenschicht;
+using Tastatur;
+using System.Data.Entity;
+using System.Data;
+using System.Media;
+using IndividuellesFenster;
+
+
+namespace Glücksrad
+{
+    /// <summary>
+    /// Interaction logic for Glücksrad_Fenster.xaml
+    /// </summary>
+    public partial class Glücksrad_Fenster : Window
+    {
+
+        // Variablen, Listen und etc
+        #region
+        // erzeugung der datenbank
+        dbCasino_IN19Entities db = new dbCasino_IN19Entities();
+
+        //Liste für die highscore
+        List<tblHighscore> highList = new List<tblHighscore>();
+
+        //Liste für die felder vom glücksrad
+        List<Sector> ListeSectoren = new List<Sector>();
+
+        List<Label> BegriffLabelListe; // RUPF + AHIT: Liste der LÖabels zum Anzeigen der Begriffe wird für die Btn_Buchstaben_Click Methode gebraucht
+
+        //erzeugen der klasse für die sounds
+        Sounds sp = new Sounds();
+
+        double PunkteZwischenSpeicher; // variable zum zwischenspeichern der punkte
+
+        double AktuellerPunktestand; // der aktuelle punktestand zum berechnen
+
+        int Versuche = 5; // Wird dann über die Datenbank Dynamisch bearbeitbar und änderbar sein (Linq + Lambda)
+
+        int AusgewaehlterSektor; //RUPF + AHIT: Variable wird zur ansteuerung der Btn_Buchstaben_Click gebraucht
+
+        int BegriffLaenge = 0; // Begrifflaenge um zu wissen wann alle Buchstaben erraten wurden
+
+        int VokalKaufenKosten = 300; // Hier wird dann der Wert aus der DB bezogen
+
+        int PunkteProVersuchUebrig = 500; // Hier wird dann der Wert aus der DB bezogen
+
+        double AufloesenGesamtpunkte = 0;
+
+        //bool KonsonantenBlaseEinmal = true;
+        bool VokalBlaseEinmal = true;
+        bool VokalKaufenGedrueckt = false; // gibt den Status des BUttons an
+
+        bool SpielPhase; // dieser bool regelt die Spielphasen und damit was der User druecken kann 
+
+        //bool für die auflösung
+        bool AufloesenGedrueckt = false;
+
+        bool bild1 = true;
+
+        string gesucht = ""; // string zum befüllen der Begriffe ??!
+
+        //Array zur verteilung der Buchstaben
+        public char[] arrayWort;
+
+        //AHIT + MAKA Hintergrundfarben der Aktiven Felder  testzwecke
+        public Color hintergrundGelb = (Color)ColorConverter.ConvertFromString("#FF6C6C0F");
+
+        //AHIT + MAKA Hintergrundfarben der Passive Felder
+        public Color hintergrundBlue = (Color)ColorConverter.ConvertFromString("#FF0F186C");
+       
+        //AHIT + MAKA Hintergrundfarben der Aktiven Felder
+        public Color hintergrundWhite = (Color)ColorConverter.ConvertFromString("#FFF");
+
+        //GlobaleSpielID
+        int sessionID;
+
+        #endregion
+
+
+
+        public Glücksrad_Fenster(GlobaleVariablen SessionSpielID) : this()
+        {
+            //ID für das spiel von der datenbank
+            sessionID = SessionSpielID.SessionSpielID;
+
+            //anzeige der highscore der top 3 rechts oben
+            HighscoreTop3();
+        }
+
+        public Glücksrad_Fenster()
+        {
+            InitializeComponent();
+
+            SpielPhase = false;
+
+            //Hintergrundmusik
+            sp.playBackgroundSound("Sounds/backgroundMusic.wav");
+            startGluecksrad();
+            
+            //VokalGrid.Visibility = Visibility.Hidden;
+            // befüllung der Liste zur festlegung der Position des Rades und der ermittellung des Wertes
+            // Grade des Glückrades und Werte  
+            #region
+
+
+            ListeSectoren.Add(new Sector(15, 150));     //0.
+            ListeSectoren.Add(new Sector(30, 450));     //1.
+            ListeSectoren.Add(new Sector(45, 300));     //2.
+            ListeSectoren.Add(new Sector(60, 400));     //usw
+            ListeSectoren.Add(new Sector(75, 250));
+            ListeSectoren.Add(new Sector(90, 900));
+
+            ListeSectoren.Add(new Sector(105, 150));
+            ListeSectoren.Add(new Sector(120, 400));
+            ListeSectoren.Add(new Sector(135, 600));
+            ListeSectoren.Add(new Sector(150, 250));
+            ListeSectoren.Add(new Sector(165, 350));
+            ListeSectoren.Add(new Sector(180, 200));
+
+            ListeSectoren.Add(new Sector(195, 750));
+            ListeSectoren.Add(new Sector(210, 800));
+            ListeSectoren.Add(new Sector(225, 300));
+            ListeSectoren.Add(new Sector(240, 200));
+            ListeSectoren.Add(new Sector(255, 1000));
+            ListeSectoren.Add(new Sector(270, 500));
+
+            ListeSectoren.Add(new Sector(285, 400));
+            ListeSectoren.Add(new Sector(300, 300));
+            ListeSectoren.Add(new Sector(315, 200));
+            ListeSectoren.Add(new Sector(330, 150));
+            ListeSectoren.Add(new Sector(345, 700));
+            ListeSectoren.Add(new Sector(360, 200));
+
+            #endregion
+
+        }
+
+        /// <summary>
+        /// Hier werden die Werte zurückgesetzt benötigt man falls ein user das spiel erneut spielen willen
+        /// </summary>
+        private void startGluecksrad()
+        {
+            AufloesenGedrueckt = false;
+
+            //LoescheBefuellung();
+
+            SpielPhase = false;
+            
+            imgKonsonatenBlase.Visibility = Visibility.Hidden;
+            imgVokalBlase.Visibility = Visibility.Hidden;
+
+            Versuche = 5;
+
+            lbl_Versuche.Content = Versuche;
+
+            lbl_Punktestand.Content = 0;
+
+            btn_auflösung.Content = "Auflösen";
+            btn_auflösung.IsEnabled = true;
+
+            VokalGrid.Visibility = Visibility.Hidden;
+
+            btn_VokalKaufen.Content = "Vokal kaufen für " + VokalKaufenKosten + " Punkte";
+
+            btn_VokalKaufen.IsEnabled = false;
+
+            BegriffLabelListe = new List<Label>() { lbl_1, lbl_2, lbl_3, lbl_4, lbl_5, lbl_6, lbl_7, lbl_8, lbl_9, lbl_10, lbl_11, lbl_12, lbl_13, lbl_14 };
+
+            //die klasse erzeugt für die begriffe notwendig
+            BegriffBefuellung s = new BegriffBefuellung();
+
+            List<string> StarBefuellung = s.ZufallBegriffAlleKategorien();
+            //Befüllung der kategorie und des wortes
+            s.Kategorie = StarBefuellung[0];
+            s.Name = StarBefuellung[1];
+
+            BegriffLaenge = s.Name.Length;
+            //Mehtode für die startvorkehrungen
+            InitialisierungStart(s);
+        }
+
+        private void LoescheBefuellung()
+        {
+            lbl_1.Background = new SolidColorBrush(hintergrundBlue);
+            lbl_2.Background = new SolidColorBrush(hintergrundBlue);
+            lbl_3.Background = new SolidColorBrush(hintergrundBlue);
+            lbl_4.Background = new SolidColorBrush(hintergrundBlue);
+            lbl_5.Background = new SolidColorBrush(hintergrundBlue);
+            lbl_6.Background = new SolidColorBrush(hintergrundBlue);
+            lbl_7.Background = new SolidColorBrush(hintergrundBlue);
+            lbl_8.Background = new SolidColorBrush(hintergrundBlue);
+            lbl_9.Background = new SolidColorBrush(hintergrundBlue);
+            lbl_10.Background = new SolidColorBrush(hintergrundBlue);
+            lbl_11.Background = new SolidColorBrush(hintergrundBlue);
+            lbl_12.Background = new SolidColorBrush(hintergrundBlue);
+            lbl_13.Background = new SolidColorBrush(hintergrundBlue);
+            lbl_14.Background = new SolidColorBrush(hintergrundBlue);
+
+            btn_A.IsEnabled = true;
+            btn_B.IsEnabled = true;
+            btn_C.IsEnabled = true;
+            btn_D.IsEnabled = true;
+            btn_E.IsEnabled = true;
+            btn_F.IsEnabled = true;
+            btn_G.IsEnabled = true;
+            btn_H.IsEnabled = true;
+            btn_I.IsEnabled = true;
+            btn_J.IsEnabled = true;
+            btn_K.IsEnabled = true;
+            btn_L.IsEnabled = true;
+            btn_M.IsEnabled = true;
+            btn_N.IsEnabled = true;
+            btn_O.IsEnabled = true;
+            btn_P.IsEnabled = true;
+            btn_Q.IsEnabled = true;
+            btn_R.IsEnabled = true;
+            btn_S.IsEnabled = true;
+            btn_T.IsEnabled = true;
+            btn_U.IsEnabled = true;
+            btn_V.IsEnabled = true;
+            btn_W.IsEnabled = true;
+            btn_X.IsEnabled = true;
+            btn_Y.IsEnabled = true;
+            btn_Z.IsEnabled = true;
+
+            lbl_1.Content = "";
+            lbl_2.Content = "";
+            lbl_3.Content = "";
+            lbl_4.Content = "";
+            lbl_5.Content = "";
+            lbl_6.Content = "";
+            lbl_7.Content = "";
+            lbl_8.Content = "";
+            lbl_9.Content = "";
+            lbl_10.Content = "";
+            lbl_11.Content = "";
+            lbl_12.Content = "";
+            lbl_13.Content = "";
+            lbl_14.Content = "";
+
+            lbl_1.Foreground = Brushes.White;
+            lbl_2.Foreground = Brushes.White;
+            lbl_3.Foreground = Brushes.White;
+            lbl_4.Foreground = Brushes.White;
+            lbl_5.Foreground = Brushes.White;
+            lbl_6.Foreground = Brushes.White;
+            lbl_7.Foreground = Brushes.White;
+            lbl_8.Foreground = Brushes.White;
+            lbl_9.Foreground = Brushes.White;
+            lbl_10.Foreground = Brushes.White;
+            lbl_11.Foreground = Brushes.White;
+            lbl_12.Foreground = Brushes.White;
+            lbl_13.Foreground = Brushes.White;
+            lbl_14.Foreground = Brushes.White;
+        }
+
+        public void BefuellungFarben()
+        {
+            foreach (var item in BegriffLabelListe)
+            {
+                if (item.Content == "")
+                {
+                    item.Background = new SolidColorBrush(hintergrundBlue);
+                }
+
+                else
+                {
+                    if (item.Content == "-")
+                    {
+                        item.Background = Brushes.LightBlue;
+                        item.Foreground = Brushes.Black;
+                    }
+                    else
+                    {
+                        item.Background = new SolidColorBrush(hintergrundWhite);
+                    }
+                }
+
+
+
+            }
+
+        }
+
+
+        /// <summary>
+        /// AHIT + MAKA Zum  befüllen der anzeige des ersten wortes 
+        /// </summary>
+        /// <param name="laenge">länge des ersten wortes</param>
+        /// <param name="name">)char)array des wortes</param>
+        public void BefuellungErstesWort(int laenge, char[] name)
+        {
+            //AHIT + MAKA  überfrüngen der länge des erstes wortes mit 2 Buchstaben
+
+            if (laenge == 1)
+            {
+                lbl_3.Content = name[0].ToString().ToUpper();
+            
+            }
+            else if (laenge == 2)
+            {
+                lbl_3.Content = name[0].ToString().ToUpper();
+                lbl_4.Content = name[1].ToString().ToUpper();
+
+            }
+            //AHIT + MAKA  überfrüngen der länge des erstes wortes mit 3 Buchstaben
+            else if (laenge == 3)
+            {
+                lbl_3.Content = name[0].ToString().ToUpper();
+                lbl_4.Content = name[1].ToString().ToUpper();
+                lbl_5.Content = name[2].ToString().ToUpper();
+
+            }
+            //AHIT + MAKA  überfrüngen der länge des erstes wortes mit 4 Buchstaben
+            else if (laenge == 4)
+            {
+                lbl_2.Content = name[0].ToString().ToUpper();
+                lbl_3.Content = name[1].ToString().ToUpper();
+                lbl_4.Content = name[2].ToString().ToUpper();
+                lbl_5.Content = name[3].ToString().ToUpper();
+
+            }
+            //AHIT + MAKA  überfrüngen der länge des erstes wortes mit 5 Buchstaben
+            else if (laenge == 5)
+            {
+                lbl_2.Content = name[0].ToString().ToUpper();
+                lbl_3.Content = name[1].ToString().ToUpper();
+                lbl_4.Content = name[2].ToString().ToUpper();
+                lbl_5.Content = name[3].ToString().ToUpper();
+                lbl_6.Content = name[4].ToString().ToUpper();
+
+            }
+            //AHIT + MAKA  überfrüngen der länge des erstes wortes mit 6 Buchstaben
+            else if (laenge == 6)
+            {
+                lbl_1.Content = name[0].ToString().ToUpper();
+                lbl_2.Content = name[1].ToString().ToUpper();
+                lbl_3.Content = name[2].ToString().ToUpper();
+                lbl_4.Content = name[3].ToString().ToUpper();
+                lbl_5.Content = name[4].ToString().ToUpper();
+                lbl_6.Content = name[5].ToString().ToUpper();
+
+            }
+            //AHIT + MAKA  überfrüngen der länge des erstes wortes mit 7 Buchstaben
+            else if (laenge == 7)
+            {
+                lbl_1.Content = name[0].ToString().ToUpper();
+                lbl_2.Content = name[1].ToString().ToUpper();
+                lbl_3.Content = name[2].ToString().ToUpper();
+                lbl_4.Content = name[3].ToString().ToUpper();
+                lbl_5.Content = name[4].ToString().ToUpper();
+                lbl_6.Content = name[5].ToString().ToUpper();
+                lbl_7.Content = name[6].ToString().ToUpper();
+
+            }
+
+            BefuellungFarben();
+        }
+
+
+        /// <summary>
+        /// AHIT + MAKA Zum  befüllen der anzeige des zweiten wortes 
+        /// </summary>
+        /// <param name="laenge">länge des zweiten wortes</param>
+        /// <param name="name">)char)array des wortes</param>
+        public void BefuellungZweitesWort(int laenge, char[] name)
+        {
+            int start = name.Length - laenge;
+            //AHIT + MAKA  überfrüngen der länge des zweiten wortes mit 2 Buchstaben
+
+            if (laenge == 1)
+            {
+
+                lbl_11.Content = name[start].ToString().ToUpper();
+               
+            }
+            else if (laenge == 2)
+            {
+                lbl_10.Content = name[start].ToString().ToUpper();
+                lbl_11.Content = name[start + 1].ToString().ToUpper();
+
+            }
+
+            //AHIT + MAKA  überfrüngen der länge des zweiten wortes mit 3 Buchstaben
+            else if (laenge == 3)
+            {
+                lbl_10.Content = name[start].ToString().ToUpper();
+                lbl_11.Content = name[start + 1].ToString().ToUpper();
+                lbl_12.Content = name[start + 2].ToString().ToUpper();
+                
+            }
+
+            //AHIT + MAKA  überfrüngen der länge des zweiten wortes mit 4 Buchstaben
+            else if (laenge == 4)
+            {
+                lbl_9.Content = name[start].ToString().ToUpper();
+                lbl_10.Content = name[start + 1].ToString().ToUpper();
+                lbl_11.Content = name[start + 2].ToString().ToUpper();
+                lbl_12.Content = name[start + 3].ToString().ToUpper();
+
+            }
+
+            //AHIT + MAKA  überfrüngen der länge des zweiten wortes mit 5 Buchstaben
+            else if (laenge == 5)
+            {
+                lbl_9.Content = name[start].ToString().ToUpper();
+                lbl_10.Content = name[start + 1].ToString().ToUpper();
+                lbl_11.Content = name[start + 2].ToString().ToUpper();
+                lbl_12.Content = name[start + 3].ToString().ToUpper();
+                lbl_13.Content = name[start + 4].ToString().ToUpper();
+
+            }
+
+            //AHIT + MAKA  überfrüngen der länge des zweiten wortes mit 6 Buchstaben
+            else if (laenge == 6)
+            {
+                lbl_8.Content = name[start].ToString().ToUpper();
+                lbl_9.Content = name[start + 1].ToString().ToUpper();
+                lbl_10.Content = name[start + 2].ToString().ToUpper();
+                lbl_11.Content = name[start + 3].ToString().ToUpper();
+                lbl_12.Content = name[start + 4].ToString().ToUpper();
+                lbl_13.Content = name[start + 5].ToString().ToUpper();
+
+            }
+
+            //AHIT + MAKA  überfrüngen der länge des zweiten wortes mit 7 Buchstaben
+            else if (laenge == 7)
+            {
+                lbl_8.Content = name[start].ToString().ToUpper();
+                lbl_9.Content = name[start + 1].ToString().ToUpper();
+                lbl_10.Content = name[start + 2].ToString().ToUpper();
+                lbl_11.Content = name[start + 3].ToString().ToUpper();
+                lbl_12.Content = name[start + 4].ToString().ToUpper();
+                lbl_13.Content = name[start + 5].ToString().ToUpper();
+                lbl_14.Content = name[start + 6].ToString().ToUpper();
+
+            }
+            BefuellungFarben();
+        }
+
+        // AHIT + MAKA  Start Vorkehrungen
+        private void InitialisierungStart(BegriffBefuellung s)
+        {
+
+            bool gesuchtstring = false;
+
+            gesucht = s.Name;
+
+            arrayWort = gesucht.ToCharArray(0, (gesucht.Length));
+
+            int a = gesucht.IndexOf(" ", 0);
+
+            if (a != -1)
+                gesuchtstring = true;
+
+
+            if (arrayWort.Length <= 7 && gesuchtstring == false)
+            {
+
+                BefuellungErstesWort(arrayWort.Length, arrayWort);
+                BegriffLaenge = arrayWort.Length;
+            }
+
+            else if (arrayWort.Length >= 7 && gesuchtstring)
+            {
+
+                BefuellungErstesWort(a, arrayWort);
+                a++;
+
+                int b = (s.Name.Length - a);
+
+                BefuellungZweitesWort(b, arrayWort);
+
+                BegriffLaenge = arrayWort.Length - 1;
+            }
+            else if (arrayWort.Length >= 8 && a != arrayWort.Length && gesuchtstring == false)
+            {
+
+                BefuellungMitBindestrich(arrayWort.Length, arrayWort);
+                BegriffLaenge = arrayWort.Length;
+            }
+
+
+            lblKategorie.Content = s.Kategorie;
+        }
+
+        private void BefuellungMitBindestrich(int laenge, char[] name)
+        {
+
+            if (laenge == 8)
+            {
+
+                lbl_2.Content = name[0].ToString().ToUpper();
+                lbl_3.Content = name[1].ToString().ToUpper();
+                lbl_4.Content = name[2].ToString().ToUpper();
+                lbl_5.Content = name[3].ToString().ToUpper();
+                lbl_6.Content = "-";
+             
+                lbl_9.Content = name[4].ToString().ToUpper();
+                lbl_10.Content = name[5].ToString().ToUpper();
+                lbl_11.Content = name[6].ToString().ToUpper();
+                lbl_12.Content = name[7].ToString().ToUpper();
+
+            }
+            else if (laenge == 9)
+            {
+
+
+                lbl_2.Content = name[0].ToString().ToUpper();
+                lbl_3.Content = name[1].ToString().ToUpper();
+                lbl_4.Content = name[2].ToString().ToUpper();
+                lbl_5.Content = name[3].ToString().ToUpper();
+                lbl_6.Content = "-";
+               
+                lbl_9.Content = name[4].ToString().ToUpper();
+                lbl_10.Content = name[5].ToString().ToUpper();
+                lbl_11.Content = name[6].ToString().ToUpper();
+                lbl_12.Content = name[7].ToString().ToUpper();
+                lbl_13.Content = name[8].ToString().ToUpper();
+
+            }
+            else if (laenge == 10)
+            {
+                lbl_1.Content = name[0].ToString().ToUpper();
+                lbl_2.Content = name[1].ToString().ToUpper();
+                lbl_3.Content = name[2].ToString().ToUpper();
+                lbl_4.Content = name[3].ToString().ToUpper();
+                lbl_5.Content = name[4].ToString().ToUpper();
+
+
+                lbl_6.Content = "-";
+               
+                lbl_8.Content = name[5].ToString().ToUpper();
+                lbl_9.Content = name[6].ToString().ToUpper();
+                lbl_10.Content = name[7].ToString().ToUpper();
+                lbl_11.Content = name[8].ToString().ToUpper();
+                lbl_12.Content = name[9].ToString().ToUpper();
+
+
+            }
+            else if (laenge == 11)
+            {
+
+                lbl_1.Content = name[0].ToString().ToUpper();
+                lbl_2.Content = name[1].ToString().ToUpper();
+                lbl_3.Content = name[2].ToString().ToUpper();
+                lbl_4.Content = name[3].ToString().ToUpper();
+                lbl_5.Content = name[4].ToString().ToUpper();
+                lbl_6.Content = "-";
+               
+                lbl_8.Content = name[5].ToString().ToUpper();
+                lbl_9.Content = name[6].ToString().ToUpper();
+                lbl_10.Content = name[7].ToString().ToUpper();
+                lbl_11.Content = name[8].ToString().ToUpper();
+                lbl_12.Content = name[9].ToString().ToUpper();
+                lbl_13.Content = name[10].ToString().ToUpper();
+
+
+            }
+            else if (laenge == 12)
+            {
+
+                lbl_1.Content = name[0].ToString().ToUpper();
+                lbl_2.Content = name[1].ToString().ToUpper();
+                lbl_3.Content = name[2].ToString().ToUpper();
+                lbl_4.Content = name[3].ToString().ToUpper();
+                lbl_5.Content = name[4].ToString().ToUpper();
+                lbl_6.Content = name[5].ToString().ToUpper();
+
+                lbl_8.Content = name[6].ToString().ToUpper();
+                lbl_9.Content = name[7].ToString().ToUpper();
+                lbl_10.Content = name[8].ToString().ToUpper();
+                lbl_11.Content = name[9].ToString().ToUpper();
+                lbl_12.Content = name[10].ToString().ToUpper();
+                lbl_13.Content = name[11].ToString().ToUpper();
+
+
+                lbl_7.Content = "-";
+               
+            }
+            else if (laenge == 13)
+            {
+                lbl_1.Content = name[0].ToString().ToUpper();
+                lbl_2.Content = name[1].ToString().ToUpper();
+                lbl_3.Content = name[2].ToString().ToUpper();
+                lbl_4.Content = name[3].ToString().ToUpper();
+                lbl_5.Content = name[4].ToString().ToUpper();
+                lbl_6.Content = name[5].ToString().ToUpper();
+
+                lbl_8.Content = name[6].ToString().ToUpper();
+                lbl_9.Content = name[7].ToString().ToUpper();
+                lbl_10.Content = name[8].ToString().ToUpper();
+                lbl_11.Content = name[9].ToString().ToUpper();
+                lbl_12.Content = name[10].ToString().ToUpper();
+                lbl_13.Content = name[11].ToString().ToUpper();
+                lbl_14.Content = name[12].ToString().ToUpper();
+
+                lbl_7.Content = "-";
+                
+            }
+            BefuellungFarben();
+
+
+        }
+
+        //MAKA Schließt das fenster
+        private void btn_Beenden(object sender, MouseButtonEventArgs e)
+        {
+            PopupFenster pp = new PopupFenster();
+            pp.Logout("Wollen Sie das Spiel wirklich verlassen?");
+            pp.ShowDialog();
+            sp.backgroundLoop.Stop();
+            if (pp.ja)
+            {
+                this.Close(); 
+            }
+            else
+            {
+                sp.playBackgroundSound("Sounds/backgroundMusic.wav");
+            }
+        }
+
+
+        private void Spinstart(object sender, RoutedEventArgs e)
+        {
+
+
+            if (SpielPhase == false)
+            {
+                if (AktuellerPunktestand >= 300)
+                {
+                    imgVokalBlase.Visibility = Visibility.Visible;
+                }
+
+                imgSpinBlase.Visibility = Visibility.Hidden;
+                if (bild1)
+                    sp.playSound("Sounds/SpinSound.wav");
+
+                Random Rnd = new Random(); // initialisiert die Zufallsklasse
+
+                int RndSector = Rnd.Next(0, 24);
+                AusgewaehlterSektor = RndSector;
+
+                DoubleAnimation da = new DoubleAnimation(0, 1080 + ListeSectoren[RndSector].PositionInGrad, new Duration(TimeSpan.FromSeconds(4)), FillBehavior.HoldEnd);
+
+                da.EasingFunction = new CircleEase() { EasingMode = EasingMode.EaseOut };
+                RotateTransform rt = new RotateTransform();
+
+
+                imageFW.RenderTransform = rt;
+                rt.Angle = 0;
+
+                rt.BeginAnimation(RotateTransform.AngleProperty, da);
+                imgKonsonatenBlase.Visibility = Visibility.Visible;
+                SpielPhase = !SpielPhase;
+
+                //if (KonsonantenBlaseEinmal)
+                //{
+                //    imgKonsonatenBlase.Visibility = Visibility.Visible;
+                //    KonsonantenBlaseEinmal = false;
+                //}
+            }
+        }
+
+
+        // `Mehthode zum überpüfen der Buchstaben von tastatur mit den oben gesuchten begriff 
+        // und die score wird berechnet mit jedem sektor vom glücksrad mal anzahl der buchstaben
+        public void Btn_Buchstaben_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (SpielPhase == true)
+            {
+
+                Button gedrueckt = (Button)sender;
+
+                PunkteZwischenSpeicher = 0;
+                AktuellerPunktestand = 0;
+
+                string eingabe = gedrueckt.Content.ToString();
+
+                gedrueckt.IsEnabled = false;
+                //gedrueckt.Content = "X";
+                //gedrueckt.Foreground = Brushes.Red;
+
+
+                int Scoremultiplikator = 0;
+
+
+                for (int i = 0; i < BegriffLabelListe.Count; i++)
+                {
+                    if (eingabe == BegriffLabelListe[i].Content.ToString())
+                    {
+
+
+                        //RUPF + AHIT Aufruf Methode zur Anzeige der richtig geratenen Buchstaben 
+                        BegriffLabelListe[i].Foreground = Brushes.Black;
+                        BegriffLabelListe[i].Background = Brushes.Yellow;
+
+                        Scoremultiplikator++;
+                        BegriffLaenge--;
+                    }
+                }
+
+                // Aktualisierung des Punktestandes
+                if (eingabe != "A" && eingabe != "E" && eingabe != "I" && eingabe != "O" && eingabe != "U")
+                {
+                    imgKonsonatenBlase.Visibility = Visibility.Hidden;
+                    imgSpinBlase.Visibility = Visibility.Visible;
+                    if (AufloesenGedrueckt == false)
+                    {
+
+                        if (Scoremultiplikator != 0)
+                        {
+                            if (bild1)
+                                sp.playSound("Sounds/Korrekt.wav");
+                            PunkteZwischenSpeicher = Convert.ToInt32(lbl_Punktestand.Content.ToString());
+                            AktuellerPunktestand = PunkteZwischenSpeicher + Scoremultiplikator * ListeSectoren[AusgewaehlterSektor].Wert;
+                            lbl_Punktestand.Content = AktuellerPunktestand.ToString();
+                        }
+
+                        if (Scoremultiplikator == 0)
+                        {
+
+                            // Hier wird dann ein Versuch abgezogen da nichts richtig war 
+                            if (bild1)
+                                sp.playSound("Sounds/fail01.wav");
+                            Versuche--;
+                            lbl_Versuche.Content = Versuche;
+                            if (Versuche == 0)
+                            {
+                                //RUPF + AHIT: Hier kann man dann auch einbauen dass in der Messagebox gefragt wird ob er noch eine Runde spielen will
+                                //RUPF + AHIT: dazu müsste man dann halt ein Update der Ovocoins vornehmen und 1x die Spielkosten abziehen
+                                PopupFenster pp = new PopupFenster();
+                                pp.InfoFenster("Sie haben Verloren und " + lbl_Punktestand.Content.ToString() + " Punkte erreicht");
+                                pp.ShowDialog();
+                                sp.backgroundLoop.Stop();
+                                this.Close();
+
+                            }
+                        }
+                    }
+
+                    if (AufloesenGedrueckt)
+                    {
+                        if (Scoremultiplikator == 0)
+                        {
+                            //PopupFenster pp = new PopupFenster();
+                            //pp.Logout("Leider falsch, versuchen Sie es erneut!");
+                            //pp.ShowDialog();
+
+                            PopupFenster pp = new PopupFenster();
+                            pp.InfoFenster("Sie haben Verloren und " + lbl_Punktestand.Content.ToString() + " Punkte erreicht");
+                            pp.ShowDialog();
+                            sp.backgroundLoop.Stop();
+                            this.Close();
+
+                            //Neustarten(pp);
+                            
+
+                        }
+
+                        if (Scoremultiplikator > 0)
+                        {
+                            punkteBeiAuflösen();
+             
+                        }
+                    }
+                }
+
+                if (eingabe == "A" || eingabe == "E" || eingabe == "I" || eingabe == "O" || eingabe == "U")
+                {
+                    imgKonsonatenBlase.Visibility = Visibility.Hidden;
+                    imgSpinBlase.Visibility = Visibility.Visible;
+                    if (AufloesenGedrueckt == false)
+                    {
+                        if (Scoremultiplikator != 0)
+                        {
+                            if (bild1)
+                                sp.playSound("Sounds/Korrekt.wav");
+                        }
+                        PunkteBerechnen();
+                        Vokale();
+                    }
+
+                    if (AufloesenGedrueckt)
+                    {
+
+                        punkteBeiAuflösen();
+                    }
+                }
+
+                if (BegriffLaenge == 0)
+                {
+                    
+
+                    double ErgebnisHighscore = Convert.ToDouble(lbl_Punktestand.Content) + (PunkteProVersuchUebrig * Convert.ToDouble(lbl_Versuche.Content)) + AufloesenGesamtpunkte;
+
+                    gewinnNachricht(ErgebnisHighscore);
+
+                    HighscoreEintrag(ErgebnisHighscore);
+
+                    SpielPhase = false;
+
+                    PopupFenster pp = new PopupFenster();
+                    pp.InfoFenster("Sie haben Verloren und " + lbl_Punktestand.Content.ToString() + " Punkte erreicht");
+                    pp.ShowDialog();
+                    sp.backgroundLoop.Stop();
+                    this.Close();
+                }
+
+                if (Convert.ToInt32(lbl_Punktestand.Content) >= VokalKaufenKosten && AufloesenGedrueckt == false)
+                {
+                    imgVokalBlase.Visibility = Visibility.Visible;
+                    btn_VokalKaufen.IsEnabled = true;
+                    if (VokalBlaseEinmal)
+                    {
+
+                        VokalBlaseEinmal = false;
+                    }
+                }
+
+                else if (Convert.ToInt32(lbl_Punktestand.Content) < VokalKaufenKosten)
+                {
+                    btn_VokalKaufen.IsEnabled = false;
+                }
+
+                if (AufloesenGedrueckt == false)
+                    SpielPhase = !SpielPhase;
+            }
+            
+        }
+
+        private void BeendenFenster()
+        {
+            //PopupFenster pf = new PopupFenster();
+            //pf.Logout("Wollen Sie noch eine Runde gewinnen?");
+            //pf.ShowDialog();
+
+            //Neustarten(pf);
+            this.Close();
+
+        }
+
+        private void Neustarten(PopupFenster pf)
+        {
+            //if (pf.ja)
+            //{
+            //    startGluecksrad();
+            //    SpielPhase = false;
+            //}
+            //else
+            //{
+            //    sp.backgroundLoop.Stop();
+            //    this.DialogResult = false;
+
+            //}
+
+
+        }
+
+        private void gewinnNachricht(double ergebnisHighscore)
+        {
+            PopupFenster pp = new PopupFenster();
+
+
+            pp.InfoFenster("Gewonnen, Super  du hast " + ergebnisHighscore);
+            pp.ShowDialog();
+            
+            SpielPhase = false;
+        }
+
+        private void HighscoreEintrag(double ErgebnisHighscore)
+        {
+           
+                    TastaturHighscore t = new TastaturHighscore();
+                    t.HighscoreEintragen(ErgebnisHighscore, sessionID);
+                    return;
+
+        }
+
+        private void VokalKaufen_Click(object sender, RoutedEventArgs e)
+        {
+            Vokale();
+
+            imgVokalBlase.Visibility = Visibility.Hidden;
+        }
+
+
+        public void Vokale()
+        {
+            if (VokalKaufenGedrueckt == false)
+            {
+                VokalGrid.Visibility = Visibility.Visible;
+                btn_VokalKaufen.Content = "Doch nicht kaufen?";
+                VokalKaufenGedrueckt = !VokalKaufenGedrueckt;
+            }
+
+            else if (VokalKaufenGedrueckt == true)
+            {
+                VokalGrid.Visibility = Visibility.Hidden;
+                btn_VokalKaufen.Content = "Vokal kaufen für " + VokalKaufenKosten + " Punkte";
+                VokalKaufenGedrueckt = !VokalKaufenGedrueckt;
+            }
+        }
+
+        private void btn_Aufloesen_Click(object sender, RoutedEventArgs e)
+        {
+
+            PopupFenster pf = new PopupFenster();
+
+            pf.FW_Aufruf();
+            pf.ShowDialog();
+
+            if (pf.FW_JA)
+            {
+                imgVokalBlase.Visibility = Visibility.Hidden;
+                AufloesenGedrueckt = true;
+
+                SpielPhase = true;
+
+                btn_VokalKaufen.IsEnabled = false;
+
+                VokalGrid.Visibility = Visibility.Visible;
+
+                btn_auflösung.Content = "Good Luck";
+
+                btn_auflösung.IsEnabled = false;
+            }
+        }
+
+
+        private void btnSound_Click(object sender, MouseButtonEventArgs e)
+        {
+
+
+            if (bild1)
+            {
+                btnSound.Source = new BitmapImage(new Uri("Images/Volume_Off1.png", UriKind.Relative));
+                sp.backgroundLoop.Stop();
+            }
+            else
+            {
+                btnSound.Source = new BitmapImage(new Uri("Images/Volume_On1.png", UriKind.Relative));
+                sp.backgroundLoop.PlayLooping();
+            }
+
+            bild1 = !bild1;
+
+
+        }
+
+        public void Btn_Vokal_Click(object sender, RoutedEventArgs e)
+        {
+            if (Convert.ToInt32(lbl_Punktestand.Content) >= VokalKaufenKosten || AufloesenGedrueckt)
+            {
+
+                imgKonsonatenBlase.Visibility = Visibility.Hidden;
+
+                Button gedrueckt = (Button)sender;
+
+                gedrueckt.IsEnabled = false;
+
+                string eingabeVokal = gedrueckt.Content.ToString();
+
+                PunkteZwischenSpeicher = 0;
+                AktuellerPunktestand = 0;
+
+                int ScoremultiplikatorVokal = 0;
+
+                for (int i = 0; i < BegriffLabelListe.Count; i++)
+                {
+                    if (eingabeVokal == BegriffLabelListe[i].Content.ToString())
+                    {
+                        //RUPF + AHIT Aufruf Methode zur Anzeige der richtig geratenen Buchstaben 
+                        BegriffLabelListe[i].Foreground = Brushes.Black;
+                        BegriffLabelListe[i].Background = Brushes.Yellow;
+
+                        ScoremultiplikatorVokal++;
+                        BegriffLaenge--;
+                    }
+                }
+                //----------------------------------------------------------------------------------------------
+                if (AufloesenGedrueckt == false)
+                {
+
+                    if (ScoremultiplikatorVokal != 0)
+                    {
+                        if (bild1)
+                            sp.playSound("Sounds/Korrekt.wav");
+                    }
+                    if (ScoremultiplikatorVokal == 0)
+                    {
+                        
+                        // Hier wird dann ein Versuch abgezogen da nichts richtig war 
+                        if (bild1)
+                            sp.playSound("Sounds/fail01.wav");
+
+                    }
+
+                    if (Versuche == 0)
+                    {
+                        //RUPF + AHIT: Hier kann man dann auch einbauen dass in der Messagebox gefragt wird ob er noch eine Runde spielen will
+                        //RUPF + AHIT: dazu müsste man dann halt ein Update der Ovocoins vornehmen und 1x die Spielkosten abziehen 
+                        PopupFenster pp = new PopupFenster();
+                        pp.Logout("Leider falsch, versuchen Sie es erneut!");
+                        pp.ShowDialog();
+
+                        sp.backgroundLoop.Stop();
+                        if (pp.ja)
+                        {
+                           
+                            //Neustarten(pp);
+                        }
+                        else
+                        {
+                            this.Close();
+                        }
+
+                        
+                        
+                    }
+                    PunkteBerechnen();
+                    Vokale();
+
+                    if (Convert.ToInt32(lbl_Punktestand.Content) < VokalKaufenKosten)
+                    {
+                        btn_VokalKaufen.IsEnabled = false;
+                    }
+                }
+
+                //------------------------------------------------------------------
+                if (AufloesenGedrueckt)
+                {
+
+                    if (ScoremultiplikatorVokal == 0)
+                    {
+                        PopupFenster pp = new PopupFenster();
+                        pp.Logout("Leider falsch, versuchen Sie es erneut!");
+                        pp.ShowDialog();
+                        //Neustarten(pp);
+
+                    }
+
+                    if (ScoremultiplikatorVokal != 0)
+                    {
+                        punkteBeiAuflösen();
+                    }
+                }
+
+                if (BegriffLaenge == 0)
+                {
+                    double ErgebnisHighscore = Convert.ToDouble(lbl_Punktestand.Content) + (PunkteProVersuchUebrig * Convert.ToDouble(lbl_Versuche.Content)) + AufloesenGesamtpunkte;
+               
+                    gewinnNachricht(ErgebnisHighscore);
+
+                    HighscoreEintrag(ErgebnisHighscore);
+
+                    SpielPhase = false;
+
+                    PopupFenster pp = new PopupFenster();
+                    pp.InfoFenster("Sie haben Verloren und " + lbl_Punktestand.Content.ToString() + " Punkte erreicht");
+                    pp.ShowDialog();
+                    sp.backgroundLoop.Stop();
+                    this.Close();
+                }
+            }      
+        }
+
+        private void punkteBeiAuflösen()
+        {
+            PunkteZwischenSpeicher = Convert.ToDouble(lbl_Punktestand.Content.ToString());
+            AktuellerPunktestand = Math.Round(PunkteZwischenSpeicher * 1.2, 0) ;
+            lbl_Punktestand.Content = Math.Round(AktuellerPunktestand, 0);
+        }
+
+        private void PunkteBerechnen()
+        {
+            PunkteZwischenSpeicher = Convert.ToDouble(lbl_Punktestand.Content.ToString());
+            AktuellerPunktestand = PunkteZwischenSpeicher - VokalKaufenKosten;
+            lbl_Punktestand.Content = AktuellerPunktestand.ToString();
+        }
+
+        private void btnHelp(object sender, MouseButtonEventArgs e)
+        {
+
+
+            if (grdInfo.Visibility == Visibility.Hidden)
+                grdInfo.Visibility = Visibility.Visible;
+            else
+                grdInfo.Visibility = Visibility.Hidden;
+        }
+
+        private void HighscoreTop3()
+        {
+            List<tblHighscore> liste = new List<tblHighscore>();
+
+            var top3 = (from high in db.tblHighscore where high.FKSpiel == sessionID orderby high.Punkte descending select high).Take(3);
+
+            foreach (var item in top3)
+            {
+                liste.Add(item);
+            }
+
+            lblHighscore1.Content = "1    " + liste[0].Spieler;
+            lblHighscore2.Content = "2    " + liste[1].Spieler;
+            lblHighscore3.Content = "3    " + liste[2].Spieler;
+            lblHighscorePunkte1.Content =  liste[0].Punkte;
+            lblHighscorePunkte2.Content =  liste[1].Punkte;
+            lblHighscorePunkte3.Content =  liste[2].Punkte;
+        }
+
+        private void Mausaendern(object sender, MouseEventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void Mausnormal(object sender, MouseEventArgs e)
+        {
+            this.Cursor = Cursors.Arrow;
+        }
+
+    }
+}
+

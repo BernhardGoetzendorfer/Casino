@@ -1,0 +1,58 @@
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Escalero\DiceRoller\bin\Debug\ESounds\background.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Escalero\DiceRoller\bin\Debug\ESounds\hold.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Escalero\DiceRoller\bin\Debug\ESounds\insert.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Escalero\DiceRoller\bin\Debug\ESounds\one_hard.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Escalero\DiceRoller\bin\Debug\ESounds\served.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Escalero\DiceRoller\bin\Debug\ESounds\three_hard.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Escalero\DiceRoller\bin\Debug\ESounds\two_hard.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Escalero\DiceRoller\bin\Debug\DiceRoller.exe.config
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Escalero\DiceRoller\bin\Debug\DiceRoller.exe
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Escalero\DiceRoller\bin\Debug\DiceRoller.pdb
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Escalero\DiceRoller\bin\Debug\Datenschicht.dll
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Escalero\DiceRoller\bin\Debug\IndividuellesFenster.exe
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Escalero\DiceRoller\bin\Debug\Tastatur.dll
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Escalero\DiceRoller\bin\Debug\Datenschicht.pdb
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Escalero\DiceRoller\bin\Debug\IndividuellesFenster.pdb
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Escalero\DiceRoller\bin\Debug\Tastatur.pdb
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Escalero\DiceRoller\bin\Debug\EntityFramework.xml
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Escalero\DiceRoller\obj\Debug\DiceRoller.csprojResolveAssemblyReference.cache
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Escalero\DiceRoller\obj\Debug\Escalero.g.cs
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Escalero\DiceRoller\obj\Debug\App.g.cs
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Escalero\DiceRoller\obj\Debug\DiceRoller_Content.g.cs
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Escalero\DiceRoller\obj\Debug\DiceRoller_MarkupCompile.cache
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Escalero\DiceRoller\obj\Debug\DiceRoller_MarkupCompile.lref
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Escalero\DiceRoller\obj\Debug\Escalero.baml
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Escalero\DiceRoller\obj\Debug\DiceRoller.g.resources
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Escalero\DiceRoller\obj\Debug\DiceRoller.Properties.Resources.resources
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Escalero\DiceRoller\obj\Debug\DiceRoller.csproj.GenerateResource.Cache
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Escalero\DiceRoller\obj\Debug\DiceRoller.exe
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Escalero\DiceRoller\obj\Debug\DiceRoller.pdb
+C:\Users\Berni\Desktop\SpieleSuite\Escalero\DiceRoller\bin\Debug\ESounds\background.wav
+C:\Users\Berni\Desktop\SpieleSuite\Escalero\DiceRoller\bin\Debug\ESounds\hold.wav
+C:\Users\Berni\Desktop\SpieleSuite\Escalero\DiceRoller\bin\Debug\ESounds\insert.wav
+C:\Users\Berni\Desktop\SpieleSuite\Escalero\DiceRoller\bin\Debug\ESounds\one_hard.wav
+C:\Users\Berni\Desktop\SpieleSuite\Escalero\DiceRoller\bin\Debug\ESounds\served.wav
+C:\Users\Berni\Desktop\SpieleSuite\Escalero\DiceRoller\bin\Debug\ESounds\three_hard.wav
+C:\Users\Berni\Desktop\SpieleSuite\Escalero\DiceRoller\bin\Debug\ESounds\two_hard.wav
+C:\Users\Berni\Desktop\SpieleSuite\Escalero\DiceRoller\bin\Debug\DiceRoller.exe.config
+C:\Users\Berni\Desktop\SpieleSuite\Escalero\DiceRoller\bin\Debug\DiceRoller.exe
+C:\Users\Berni\Desktop\SpieleSuite\Escalero\DiceRoller\bin\Debug\DiceRoller.pdb
+C:\Users\Berni\Desktop\SpieleSuite\Escalero\DiceRoller\bin\Debug\Datenschicht.dll
+C:\Users\Berni\Desktop\SpieleSuite\Escalero\DiceRoller\bin\Debug\IndividuellesFenster.exe
+C:\Users\Berni\Desktop\SpieleSuite\Escalero\DiceRoller\bin\Debug\Tastatur.dll
+C:\Users\Berni\Desktop\SpieleSuite\Escalero\DiceRoller\bin\Debug\Datenschicht.pdb
+C:\Users\Berni\Desktop\SpieleSuite\Escalero\DiceRoller\bin\Debug\IndividuellesFenster.pdb
+C:\Users\Berni\Desktop\SpieleSuite\Escalero\DiceRoller\bin\Debug\Tastatur.pdb
+C:\Users\Berni\Desktop\SpieleSuite\Escalero\DiceRoller\bin\Debug\EntityFramework.xml
+C:\Users\Berni\Desktop\SpieleSuite\Escalero\DiceRoller\obj\Debug\DiceRoller.csprojResolveAssemblyReference.cache
+C:\Users\Berni\Desktop\SpieleSuite\Escalero\DiceRoller\obj\Debug\Escalero.g.cs
+C:\Users\Berni\Desktop\SpieleSuite\Escalero\DiceRoller\obj\Debug\App.g.cs
+C:\Users\Berni\Desktop\SpieleSuite\Escalero\DiceRoller\obj\Debug\DiceRoller_Content.g.cs
+C:\Users\Berni\Desktop\SpieleSuite\Escalero\DiceRoller\obj\Debug\DiceRoller_MarkupCompile.cache
+C:\Users\Berni\Desktop\SpieleSuite\Escalero\DiceRoller\obj\Debug\DiceRoller_MarkupCompile.lref
+C:\Users\Berni\Desktop\SpieleSuite\Escalero\DiceRoller\obj\Debug\Escalero.baml
+C:\Users\Berni\Desktop\SpieleSuite\Escalero\DiceRoller\obj\Debug\DiceRoller.g.resources
+C:\Users\Berni\Desktop\SpieleSuite\Escalero\DiceRoller\obj\Debug\DiceRoller.Properties.Resources.resources
+C:\Users\Berni\Desktop\SpieleSuite\Escalero\DiceRoller\obj\Debug\DiceRoller.csproj.GenerateResource.Cache
+C:\Users\Berni\Desktop\SpieleSuite\Escalero\DiceRoller\obj\Debug\DiceRoller.exe
+C:\Users\Berni\Desktop\SpieleSuite\Escalero\DiceRoller\obj\Debug\DiceRoller.pdb

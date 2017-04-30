@@ -1,0 +1,68 @@
+﻿<Window x:Class="Highscore.ScoreList"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+            xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+            xmlns:local="clr-namespace:Highscore"
+            mc:Ignorable="d" 
+            WindowStyle="None" ResizeMode="NoResize"
+            WindowStartupLocation="CenterScreen"
+            Title="Highscore" Height="1024" Width="1280">
+    
+    <Window.Resources>
+        <Style x:Key="myHeaderStyle" TargetType="{x:Type GridViewColumnHeader}">
+            <Setter Property="Visibility" Value="Collapsed" />
+        </Style>
+    </Window.Resources>
+    <Window.Background>
+        <ImageBrush ImageSource="Image/HintergrundHighscore.png"/>
+    </Window.Background>
+
+    <Grid>
+        <Image x:Name="iBack" HorizontalAlignment="Left" Height="56" Margin="30,36,0,0" VerticalAlignment="Top" Width="60" Source="Image/zurück.png" MouseDown="btnBeenden"/>
+        <Label x:Name="label" Content="Top 10" HorizontalAlignment="Left" Margin="106,211,0,0" VerticalAlignment="Top" Foreground="White" FontSize="36" FontFamily="Arial" FontWeight="Bold"/>
+        <ListView x:Name="lvGluecksrad" HorizontalAlignment="Left" Height="484" Margin="39,267,0,0" VerticalAlignment="Top" Width="244" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
+            <ListView.View>
+                <GridView  ColumnHeaderContainerStyle="{StaticResource myHeaderStyle}">
+                    <GridViewColumn Width="auto" DisplayMemberBinding="{Binding ID}"/>
+                    <GridViewColumn Width="auto" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Width="auto" DisplayMemberBinding="{Binding Score}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label x:Name="label_Copy" Content="Top 10" HorizontalAlignment="Left" Margin="424,211,0,0" VerticalAlignment="Top" Foreground="White" FontSize="36" FontFamily="Arial" FontWeight="Bold"/>
+
+
+        <ListView x:Name="lvEscalero" HorizontalAlignment="Left" Height="484" Margin="362,267,0,0" VerticalAlignment="Top" Width="244" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
+            <ListView.View>
+                <GridView  ColumnHeaderContainerStyle="{StaticResource myHeaderStyle}" >
+                    <GridViewColumn Width="auto" DisplayMemberBinding="{Binding ID}"/>
+                    <GridViewColumn Width="auto" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Width="auto" DisplayMemberBinding="{Binding Score}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <Label x:Name="label_Copy1" Content="Top 10" HorizontalAlignment="Left" Margin="746,211,0,0" VerticalAlignment="Top" Foreground="White" FontSize="36" FontFamily="Arial" FontWeight="Bold"/>
+        <ListView x:Name="lvRoulette" HorizontalAlignment="Left" Height="484" Margin="686,267,0,0" VerticalAlignment="Top" Width="244" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
+            <ListView.View>
+                <GridView  ColumnHeaderContainerStyle="{StaticResource myHeaderStyle}">
+                    <GridViewColumn Width="auto" DisplayMemberBinding="{Binding ID}"/>
+                    <GridViewColumn Width="auto" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Width="auto" DisplayMemberBinding="{Binding Score}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <Label x:Name="label_Copy2" Content="Top 10" HorizontalAlignment="Left" Margin="1072,211,0,0" VerticalAlignment="Top" Foreground="White" FontSize="36" FontFamily="Arial" FontWeight="Bold"/>
+        <ListView x:Name="lvSlots" HorizontalAlignment="Left" Height="484" Margin="1018,267,0,0" VerticalAlignment="Top" Width="244" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
+            <ListView.View>
+                <GridView  ColumnHeaderContainerStyle="{StaticResource myHeaderStyle}" >
+                    <GridViewColumn Width="auto" DisplayMemberBinding="{Binding ID}"/>
+                    <GridViewColumn Width="auto" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Width="auto" DisplayMemberBinding="{Binding Score}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>

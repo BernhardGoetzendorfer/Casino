@@ -1,0 +1,424 @@
+﻿using System;
+using System.Windows;
+using System.Drawing;
+using System.Windows.Input;
+using WebEye.Controls.Wpf;
+using CamQrScanner;
+using System.Windows.Threading;
+using Highscore;
+using Slot_Animation;
+using Datenschicht;
+using Roulette0._0._8;
+using System.Data.Entity;
+using IndividuellesFenster;
+using System.Windows.Media.Imaging;
+using Glücksrad;
+using Würfelpoker;
+
+namespace Casino_Hauptmenue
+{
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class Hauptmenu : Window
+    {
+
+
+        //Sound
+        Sounds sp = new Sounds();
+        //MAKA Erzeugt den Scanner um den Qrcode zulesen
+        Scanner s = new Scanner();
+        //MAKA Erzeugt den Timer und die gesamtzeit für die Webcam
+        DispatcherTimer timer = new DispatcherTimer();
+        //MAKA Zuweisung der Maximalen Timer Zeit hier 10 Sekunden
+        TimeSpan totalTime = new TimeSpan(0, 0, 10);
+        //MAKA Datenbank zugriff
+        dbCasino_IN19Entities db = new dbCasino_IN19Entities();
+        //MAKA Gescannter Qrcode
+        tblQRCode code = new tblQRCode();
+        //MAKA OVOCoins
+        double OVOcoins = 0;
+        //MAKA bool Wert ob Musik Laeuft oder nicht
+        bool bild1 = true;
+
+        //MAKA Erzeug die Klasse um auf die Globalen Variablen zuzugreifen
+        GlobaleVariablen SessionSpielID = new GlobaleVariablen();
+
+        public Hauptmenu()
+        {
+            InitializeComponent();
+            //MAKA Background Sound
+            sp.PlaybackMusic("Sounds/Background.wav");
+            //MAKA Sound Lautstärke
+            sp.player.Volume = 20;
+            //sp.playBackgroundSound("Sounds/Background.wav");
+            //MAKA Kamera einstellungen Laden
+            InitializeWebcam();
+            //MAKA Ovocoins Anzeigen
+            lblOvocoins.Content = OVOcoins;
+            //Logout Button wird Deaktiviert
+            iBack.IsEnabled = false;
+        }
+
+        /// <summary>
+        ///MAKA Hollt die Kosten des Spieles aus der datenbank
+        /// </summary>
+        /// <param name="spiel"></param>
+        /// <returns></returns>
+        private double KostenSpiel(int spiel)
+        {
+            foreach (var spiele in db.tblSpiel)
+            {
+                if (spiele.IDSpiel == spiel)
+                {
+                    return spiele.Ovocoin;
+                }
+            }
+            return -1;
+        }
+
+        private void InitializeWebcam()
+        {
+
+
+            //MAKA Fügt die Webcam in die Combobox um sie dann starten zu koennen
+            InitializeComboBox();
+            //MAKA Versteckt die Combobox
+            cbxcam.Visibility = Visibility.Hidden;
+
+            //MAKA Timer für die Webcam wird der interval festgelegt
+            timer.Interval = new TimeSpan(0, 0, 1);
+            timer.Tick += WebcamTimer;
+        }
+
+        private void WebcamStart(object sender, MouseButtonEventArgs e)
+        {
+            //MAKA Wenn keine Kamera vorhanden wird der start uebersprungen
+            if (cbxcam.SelectedItem != null)
+            {
+                //MAKA Einblenden der Webcam
+                CamControl.Visibility = Visibility.Visible;
+                //MAKA zuweisen der Kamera
+                var cameraId = (WebCameraId)cbxcam.SelectedItem;
+                //MAKA Starten der zugewiesenen Kamera
+                CamControl.StartCapture(cameraId);
+                //MAKA Starten des Timers
+                timer.Start();
+            }
+        }
+
+        //MAKA Timer
+        private void WebcamTimer(object sender, EventArgs e)
+        {
+            //MAKA Bool für die pruefung von der zeit oder wenn der Code korrekt gescannt wurde
+            bool scanErfolg = false;
+
+            //MAKA Gesamtzeit - 1
+            totalTime -= TimeSpan.FromSeconds(1);
+
+            //MAKA Wenn gesamtzeit >= 1 dann wird gescannt
+            if (totalTime.Seconds >= 1)
+            {
+                //MAKA Qrcode Scanner wird ausgeführt und gibt einen Wert wahr oder falsch zurueck
+                scanErfolg = Scan();
+            }
+
+            //MAKA Wenn der Timer abläuft dann wird der Wert auf true gestellt
+            if (totalTime == TimeSpan.FromSeconds(0))
+            {
+                scanErfolg = true;
+            }
+
+            //MAKA Wenn der wert true dann schließt er die Kamera
+            if (scanErfolg)
+            {
+                //MAKA Stopt die Kamera falls der QRCode nicht in der angegebenen Zeit
+                //gescannt wurde und der Timer wird wieder zurückgesetzt
+                totalTime = TimeSpan.FromSeconds(10);
+                StopProgram();
+            }
+
+        }
+
+        /// <summary>
+        /// MAKA Scan Methode Scannt das Bild um den String aus dem Qrcode zulesen
+        /// </summary>
+        /// <returns>True wenn ein String erkannt wurde</returns>
+        private bool Scan()
+        {
+            //MAKA Gescannter QRCode string
+            string qr = "";
+            Bitmap i = CamControl.GetCurrentImage();
+
+            // AHIT Überprüfung ob Scanner nicht NULL ist
+            if (s.Scannen(i) != null)
+            {
+                qr = s.Scannen(i);
+            }
+
+            if (qr != "")
+            {
+                timer.Stop();
+                //MessageBox.Show(qr);
+                foreach (var qrcode in db.tblQRCode)
+                {
+                    cLogin.Visibility = Visibility.Visible;
+                    //MAKA Ueberpruefen des Gescannten Qrcode mit der Datenbank
+                    if (qrcode.Ovocoin <= 0)
+                        lblLogin.Content = "Sie haben kein Guthaben mehr!";
+                    else if (qrcode.Eingeloggt)
+                        lblLogin.Content = "Der Code wird Bereits Vewendet!";
+                    else if (qr == qrcode.QRBAN)
+                    {
+                        //MAKA Logout Button wird Aktiviert
+                        iBack.IsEnabled = true;
+                        //MAKA Wenn vorhanden wert aus der Datenbank in das Label speichern
+                        OVOcoins = qrcode.Ovocoin;
+                        lblOvocoins.Content = qrcode.Ovocoin;
+                        qrcode.Eingeloggt = true;
+                        db.Entry(qrcode).State = EntityState.Modified;
+
+                        code = qrcode;
+                        lblLogin.Content = "Sie haben " + qrcode.Ovocoin + " Ovocoins Erfolgreich Aufgeladen.";
+                    }
+                }
+                db.SaveChanges();
+                return true;
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// MAKA Speichert die Kamera in die Combobox um sie spaeter zu verwenden
+        /// </summary>
+        private void InitializeComboBox()
+        {
+            //MAKA Zuweisung der Kamera in die Combobox
+            cbxcam.ItemsSource = CamControl.GetVideoCaptureDevices();
+            //MAKA Start werd der Combobox
+            if (cbxcam.Items.Count > 0)
+                cbxcam.SelectedItem = cbxcam.Items[0];
+        }
+
+        /// <summary>
+        /// MAKA Stopt die Kamera
+        /// </summary>
+        private void StopProgram()
+        {
+            //MAKA Timer wird Gestoppt
+            timer.Stop();
+            CamControl.Visibility = Visibility.Hidden;
+            CamControl.StopCapture();
+
+        }
+
+        private void btn_Highscore(object sender, RoutedEventArgs e)
+        {
+            ScoreList a = new ScoreList(db);
+            a.ShowDialog();
+            Musikcontrol();
+        }
+
+        private void btn_Roulette(object sender, RoutedEventArgs e)
+        {
+            SessionSpielID.SessionSpielID = 4;
+            //MAKA Foreignkey aus datenbank 1 = Glücksrad ,4 = Roulette, 2= Escalero, 3 = Slotmaschine
+            if (Spielkosten(SessionSpielID.SessionSpielID))
+            {
+                MusikStop();
+                Roulette r = new Roulette(SessionSpielID);
+                r.ShowDialog();
+                Musikcontrol();
+                SessionSpielID.SessionSpielID = -1;
+            }
+        }
+
+        private void btn_Glücksrad(object sender, RoutedEventArgs e)
+        {
+
+            SessionSpielID.SessionSpielID = 1;
+
+            //MAKA Foreignkey aus datenbank 1 = Glücksrad ,4 = Roulette, 2= Escalero, 3 = Slotmaschine
+            if (Spielkosten(SessionSpielID.SessionSpielID))
+            {
+                MusikStop();
+
+                Glücksrad_Fenster gf = new Glücksrad_Fenster(SessionSpielID);
+                bool? result = gf.ShowDialog();
+                Musikcontrol();
+            }
+
+            SessionSpielID.SessionSpielID = -1;
+        }
+
+        private void btn_Escalero(object sender, RoutedEventArgs e)
+        {
+            SessionSpielID.SessionSpielID = 2;
+            //MAKA Foreignkey aus datenbank 1 = Glücksrad ,4 = Roulette, 2= Escalero, 3 = Slotmaschine
+            if (Spielkosten(SessionSpielID.SessionSpielID))
+            {
+                MusikStop();
+                Escalero es = new Escalero(SessionSpielID);
+                es.ShowDialog();
+                Musikcontrol();
+           
+            }
+            SessionSpielID.SessionSpielID = -1;
+        }
+
+        private void btn_Slots(object sender, RoutedEventArgs e)
+        {
+            SessionSpielID.SessionSpielID = 3;
+            //MAKA Foreignkey aus datenbank 1 = Glücksrad ,4 = Roulette, 2= Escalero, 3 = Slotmaschine
+            if (Spielkosten(SessionSpielID.SessionSpielID))
+            {
+                MusikStop();
+                SlotMachine_Final slot = new SlotMachine_Final(SessionSpielID);
+                slot.ShowDialog();
+                Musikcontrol();
+
+                SessionSpielID.SessionSpielID = -1;
+            }
+        }
+
+        /// <summary>
+        /// Fenster wird geschloßen wenn der User das Bestätigt
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnLogout(object sender, MouseButtonEventArgs e)
+        {
+            //MAKA Nachricht für User ob er Wirklcih beenden will
+            //MessageBoxResult result = MessageBox.Show("Wollen sie wirklich Aufhören?", "Achtung", MessageBoxButton.OKCancel, MessageBoxImage.Information, MessageBoxResult.Cancel);
+            //MAKA PopupFenster Erzeugen
+            PopupFenster pop = new PopupFenster();
+            pop.Logout("Wollen Sie  wirklich aufhören?");
+            pop.ShowDialog();
+            lblOvocoins.Content = 0;
+
+            //MAKA Wenn User beenden will dann wir das fenster geschlossen
+            //if (MessageBoxResult.OK == result)
+            if (pop.ja)
+            {
+                if (code != null)
+                {
+                    code.Eingeloggt = false;
+                    db.Entry(code).State = EntityState.Modified;
+                    OVOcoins = 0;
+                    code = new tblQRCode();
+                }
+                lblOvocoins.Content = "0";
+                //db.SaveChanges();
+
+                //MAKA Gehört dann weggenommen  ist nur für Test Zwecke
+                this.Close();
+            }
+        }
+
+        /// <summary>
+        /// MAKA Abgezugen vom Aktuell kontostand und Speichern in die Datenbank
+        /// </summary>
+        /// <param name="spiel">Id des Spieles</param>
+        /// <returns>int</returns>
+        public bool Spielkosten(int spiel)
+        {
+            double spielkosten = KostenSpiel(spiel);
+
+            if (OVOcoins > spielkosten)
+            {
+                //MAKA Foreignkey aus datenbank 1 = Glücksrad ,2 = Roulette, 3= Escalero, 4 = Slotmaschine
+                //MAKA Kosten werden von den OvoCoins abgezogen
+                OVOcoins -= spielkosten;
+                //MAKA Ovocoins werden im Hauptmenü angepasst
+                lblOvocoins.Content = OVOcoins;
+                //MAKA den wert auf der datenbank Aktuallisieren
+                code.Ovocoin = OVOcoins;
+
+                var qr = db.tblQRCode.Find(code.QRBAN);
+                if (qr != null)
+                {
+                    db.Entry(qr).State = EntityState.Modified;
+                    db.SaveChanges();
+                }
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("Keine Ovocoins verfügbar");
+                return false;
+            }
+        }
+
+        private void btnInfoMain(object sender, MouseButtonEventArgs e)
+        {
+            PopupFenster pop = new PopupFenster();
+            pop.InfoFenster("Hier haben Sie unten alle Spiele zur Auswahl\nRechts können sie Ihre Ovocoins über die Kamera Aufladen\nund Darunter werden die Ovocoins dann angezeigt.\nLinks können Sie in die Highscore Liste gehen.");
+            pop.ShowDialog();
+        }
+
+        private void btnSound(object sender, MouseButtonEventArgs e)
+        {
+            System.Windows.Controls.Image a = (System.Windows.Controls.Image)sender;
+
+
+
+            //MAKA Bild wechsel des Mute Button
+            if (btnMute.Visibility == Visibility)
+            {
+                btnMute.Visibility = Visibility.Hidden;
+                btnMuteOn.Visibility = Visibility.Visible;
+                sp.player.Volume = 0;
+                //sp.backgroundLoop.Stop();
+                btnMute.Source = new BitmapImage(new Uri("Image/Volume_Off1.png", UriKind.Relative));
+                bild1 = false;
+            }
+            else
+            {
+                btnMuteOn.Visibility = Visibility.Hidden;
+                btnMute.Visibility = Visibility.Visible;
+                sp.player.Volume = 60;
+
+                //sp.backgroundLoop.PlayLooping();
+                btnMute.Source = new BitmapImage(new Uri("Image/Volume_On1.png", UriKind.Relative));
+                bild1 = true;
+            }
+
+
+        }
+
+        /// <summary>
+        /// Wenn das spiel beendet wird, dann wird die audioeinstellung vor Start wieder übernommen
+        /// </summary>
+        private void Musikcontrol()
+        {
+            if (bild1)
+                sp.PlaybackMusic("Sounds/Background.wav");
+            else
+                sp.player.Volume = 0;
+        }
+
+        /// <summary>
+        /// Stop die Background Musik
+        /// </summary>
+        private void MusikStop()
+        {
+            //background Musik stoppen
+            sp.player.Volume = 0;
+        }
+
+        private void LoginAusblenden(object sender, RoutedEventArgs e)
+        {
+            cLogin.Visibility = Visibility.Hidden;
+        }
+
+        private void Mausaendern(object sender, MouseEventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void Mausnormal(object sender, MouseEventArgs e)
+        {
+            this.Cursor = Cursors.Arrow;
+        }
+    }
+}

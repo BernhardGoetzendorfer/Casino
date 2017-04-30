@@ -1,0 +1,40 @@
+﻿<Window x:Class="IndividuellesFenster.PopupFenster"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IndividuellesFenster"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Title="PopupFenster" Height="1024" Width="1280" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" ShowInTaskbar="False" Foreground="White">
+    <Window.Background>
+        <SolidColorBrush Opacity="0.9" Color="black"/>
+    </Window.Background>
+
+    <Grid>
+        <Canvas Name="cLogout" Visibility="Hidden">
+            <Button x:Name="btnJa1" Content="Ja" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Width="75" Canvas.Top="593" Canvas.Left="524" Click="btnJa"/>
+            <Button x:Name="BtnNein1" Content="Nein" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Width="75" Canvas.Top="593" Canvas.Left="668" Click="btnJa"/>
+            <Label x:Name="lblnachricht" Content="Wollen Sie sich wirklich Aufhören?"  Width="410" Foreground="White"  Canvas.Top="465" Canvas.Left="431" FontSize="21.333" HorizontalContentAlignment="Center" Height="90" />
+
+        </Canvas>
+        <Canvas Name="cInfo" Visibility="Hidden">
+            <Button x:Name="button" Content="Ok" Canvas.Left="597" Canvas.Top="592" Width="75" Click="btnOk"/>
+            <TextBlock x:Name="tbInfo" Canvas.Left="318" TextWrapping="Wrap" Text="TextBlock" Canvas.Top="272" Height="274" Width="645" FontSize="21.333"/>
+
+        </Canvas >
+
+        <Canvas Name="cHighscore" Visibility="Hidden">
+            <Label x:Name="lblHighscore" Content="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Canvas.Left="250" Canvas.Top="387" Height="153" Width="782" Foreground="White" FontSize="20"/>
+            <Button x:Name="btnok" Content="OK" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Width="140" Canvas.Top="560" Canvas.Left="560" Click="btnJa" FontSize="20"/>
+
+        </Canvas>
+        <Canvas x:Name="FW_Aufloesen" Visibility="Hidden">
+            <Image x:Name="image_Btn_Ja" Source="Image/Hakerl.gif"  HorizontalAlignment="Left" Height="195" VerticalAlignment="Top" Width="200" Canvas.Left="400" Canvas.Top="600" MouseDown="FW_true"/>
+            <Image x:Name="image_Btn_Nein" Source="Image/Kreuz.gif" HorizontalAlignment="Left" Height="195" VerticalAlignment="Top" Width="200" Canvas.Left="720" Canvas.Top="600" MouseDown="FW_False"/>
+            <Label x:Name="lblAufloesenNachricht" Content="&#x9;Sind Sie sich sicher ?&#xD;&#xA;&#xD;&#xA;1 Fehler und Sie haben verloren !!!"  Width="340" Foreground="White"  Canvas.Top="395" Canvas.Left="480" FontSize="21.333" Height="120"  />
+        </Canvas>
+
+    </Grid>
+</Window>

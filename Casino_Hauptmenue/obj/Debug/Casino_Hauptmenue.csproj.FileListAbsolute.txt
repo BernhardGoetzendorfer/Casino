@@ -1,0 +1,294 @@
+D:\Projekt\Casino_Hauptmenue\bin\Debug\Casino_Hauptmenue.exe.config
+D:\Projekt\Casino_Hauptmenue\bin\Debug\Sounds\backgroundMusic.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\Sounds\fail01.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\Sounds\SpinSound.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\Sounds\Korrekt.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\Resources\bg.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\Resources\cs.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\ESounds\background.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\ESounds\hold.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\ESounds\insert.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\ESounds\one_hard.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\ESounds\served.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\ESounds\three_hard.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\ESounds\two_hard.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\RSounds\0.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\RSounds\1.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\RSounds\10.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\RSounds\11.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\RSounds\12.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\RSounds\13.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\RSounds\14.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\RSounds\15.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\RSounds\16.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\RSounds\17.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\RSounds\18.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\RSounds\19.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\RSounds\2.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\RSounds\20.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\RSounds\21.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\RSounds\22.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\RSounds\23.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\RSounds\24.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\RSounds\25.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\RSounds\26.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\RSounds\27.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\RSounds\28.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\RSounds\29.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\RSounds\3.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\RSounds\30.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\RSounds\31.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\RSounds\32.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\RSounds\33.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\RSounds\34.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\RSounds\35.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\RSounds\36.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\RSounds\4.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\RSounds\5.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\RSounds\6.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\RSounds\7.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\RSounds\8.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\RSounds\9.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\RSounds\JetonSetzten.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\RSounds\RouletteHintergrund.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\RSounds\hintergrundNeu2.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\RSounds\hoechstgewinn.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\RSounds\roulettekesselSound.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\Sounds\Background.wav
+D:\Projekt\Casino_Hauptmenue\bin\Debug\Casino_Hauptmenue.exe
+D:\Projekt\Casino_Hauptmenue\bin\Debug\Casino_Hauptmenue.pdb
+D:\Projekt\Casino_Hauptmenue\bin\Debug\CamQrScanner.dll
+D:\Projekt\Casino_Hauptmenue\bin\Debug\Datenschicht.dll
+D:\Projekt\Casino_Hauptmenue\bin\Debug\DiceRoller.exe
+D:\Projekt\Casino_Hauptmenue\bin\Debug\EntityFramework.dll
+D:\Projekt\Casino_Hauptmenue\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projekt\Casino_Hauptmenue\bin\Debug\Glücksrad.exe
+D:\Projekt\Casino_Hauptmenue\bin\Debug\Highscore.dll
+D:\Projekt\Casino_Hauptmenue\bin\Debug\IndividuellesFenster.exe
+D:\Projekt\Casino_Hauptmenue\bin\Debug\Roulette0.0.8.exe
+D:\Projekt\Casino_Hauptmenue\bin\Debug\Slot_Animation.exe
+D:\Projekt\Casino_Hauptmenue\bin\Debug\Tastatur.dll
+D:\Projekt\Casino_Hauptmenue\bin\Debug\WebEye.Controls.Wpf.WebCameraControl.dll
+D:\Projekt\Casino_Hauptmenue\bin\Debug\zxing.dll
+D:\Projekt\Casino_Hauptmenue\bin\Debug\zxing.presentation.dll
+D:\Projekt\Casino_Hauptmenue\bin\Debug\Datenschicht.pdb
+D:\Projekt\Casino_Hauptmenue\bin\Debug\DiceRoller.pdb
+D:\Projekt\Casino_Hauptmenue\bin\Debug\Glücksrad.pdb
+D:\Projekt\Casino_Hauptmenue\bin\Debug\Highscore.pdb
+D:\Projekt\Casino_Hauptmenue\bin\Debug\IndividuellesFenster.pdb
+D:\Projekt\Casino_Hauptmenue\bin\Debug\Roulette0.0.8.pdb
+D:\Projekt\Casino_Hauptmenue\bin\Debug\Slot_Animation.pdb
+D:\Projekt\Casino_Hauptmenue\bin\Debug\Tastatur.pdb
+D:\Projekt\Casino_Hauptmenue\bin\Debug\EntityFramework.xml
+D:\Projekt\Casino_Hauptmenue\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projekt\Casino_Hauptmenue\bin\Debug\zxing.pdb
+D:\Projekt\Casino_Hauptmenue\bin\Debug\zxing.xml
+D:\Projekt\Casino_Hauptmenue\bin\Debug\zxing.presentation.pdb
+D:\Projekt\Casino_Hauptmenue\bin\Debug\zxing.presentation.xml
+D:\Projekt\Casino_Hauptmenue\obj\Debug\Casino_Hauptmenue.csprojResolveAssemblyReference.cache
+D:\Projekt\Casino_Hauptmenue\obj\Debug\Hauptmenu.g.cs
+D:\Projekt\Casino_Hauptmenue\obj\Debug\App.g.cs
+D:\Projekt\Casino_Hauptmenue\obj\Debug\Casino_Hauptmenue_MarkupCompile.cache
+D:\Projekt\Casino_Hauptmenue\obj\Debug\Casino_Hauptmenue_MarkupCompile.lref
+D:\Projekt\Casino_Hauptmenue\obj\Debug\Hauptmenu.baml
+D:\Projekt\Casino_Hauptmenue\obj\Debug\Casino_Hauptmenue.g.resources
+D:\Projekt\Casino_Hauptmenue\obj\Debug\Casino_Hauptmenue.Properties.Resources.resources
+D:\Projekt\Casino_Hauptmenue\obj\Debug\Casino_Hauptmenue.csproj.GenerateResource.Cache
+D:\Projekt\Casino_Hauptmenue\obj\Debug\Casino_Hauptmenue.exe
+D:\Projekt\Casino_Hauptmenue\obj\Debug\Casino_Hauptmenue.pdb
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\Casino_Hauptmenue.exe.config
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\obj\Debug\Casino_Hauptmenue.exe
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\obj\Debug\Casino_Hauptmenue.pdb
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\Sounds\backgroundMusic.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\Sounds\fail01.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\Sounds\SpinSound.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\Sounds\Korrekt.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\Resources\bg.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\Resources\cs.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\ESounds\background.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\ESounds\hold.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\ESounds\insert.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\ESounds\one_hard.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\ESounds\served.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\ESounds\three_hard.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\ESounds\two_hard.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\0.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\1.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\10.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\11.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\12.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\13.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\14.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\15.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\16.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\17.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\18.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\19.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\2.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\20.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\21.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\22.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\23.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\24.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\25.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\26.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\27.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\28.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\29.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\3.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\30.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\31.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\32.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\33.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\34.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\35.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\36.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\4.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\5.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\6.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\7.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\8.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\9.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\JetonSetzten.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\RouletteHintergrund.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\hintergrundNeu2.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\hoechstgewinn.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\roulettekesselSound.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\Sounds\Background.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\Casino_Hauptmenue.exe
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\Casino_Hauptmenue.pdb
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\CamQrScanner.dll
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\Datenschicht.dll
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\DiceRoller.exe
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\EntityFramework.dll
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\Glücksrad.exe
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\Highscore.dll
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\IndividuellesFenster.exe
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\Roulette0.0.8.exe
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\Slot_Animation.exe
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\Tastatur.dll
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\WebEye.Controls.Wpf.WebCameraControl.dll
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\zxing.dll
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\zxing.presentation.dll
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\Datenschicht.pdb
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\DiceRoller.pdb
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\Glücksrad.pdb
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\Highscore.pdb
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\IndividuellesFenster.pdb
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\Roulette0.0.8.pdb
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\Slot_Animation.pdb
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\Tastatur.pdb
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\EntityFramework.xml
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\zxing.pdb
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\zxing.xml
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\zxing.presentation.pdb
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\bin\Debug\zxing.presentation.xml
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\obj\Debug\Casino_Hauptmenue.csprojResolveAssemblyReference.cache
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\obj\Debug\Hauptmenu.g.cs
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\obj\Debug\App.g.cs
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\obj\Debug\Casino_Hauptmenue_MarkupCompile.cache
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\obj\Debug\Casino_Hauptmenue_MarkupCompile.lref
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\obj\Debug\Hauptmenu.baml
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\obj\Debug\Casino_Hauptmenue.g.resources
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\obj\Debug\Casino_Hauptmenue.Properties.Resources.resources
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Casino_Hauptmenue\obj\Debug\Casino_Hauptmenue.csproj.GenerateResource.Cache
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\Casino_Hauptmenue.exe.config
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\obj\Debug\Casino_Hauptmenue.exe
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\obj\Debug\Casino_Hauptmenue.pdb
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\Sounds\backgroundMusic.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\Sounds\fail01.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\Sounds\SpinSound.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\Sounds\Korrekt.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\Resources\bg.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\Resources\cs.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\ESounds\background.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\ESounds\hold.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\ESounds\insert.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\ESounds\one_hard.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\ESounds\served.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\ESounds\three_hard.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\ESounds\two_hard.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\0.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\1.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\10.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\11.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\12.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\13.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\14.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\15.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\16.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\17.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\18.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\19.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\2.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\20.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\21.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\22.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\23.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\24.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\25.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\26.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\27.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\28.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\29.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\3.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\30.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\31.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\32.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\33.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\34.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\35.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\36.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\4.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\5.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\6.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\7.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\8.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\9.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\JetonSetzten.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\RouletteHintergrund.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\hintergrundNeu2.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\hoechstgewinn.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\RSounds\roulettekesselSound.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\Sounds\Background.wav
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\Casino_Hauptmenue.exe
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\Casino_Hauptmenue.pdb
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\CamQrScanner.dll
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\Datenschicht.dll
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\DiceRoller.exe
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\EntityFramework.dll
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\Glücksrad.exe
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\Highscore.dll
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\IndividuellesFenster.exe
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\Roulette0.0.8.exe
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\Slot_Animation.exe
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\Tastatur.dll
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\WebEye.Controls.Wpf.WebCameraControl.dll
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\zxing.dll
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\zxing.presentation.dll
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\Datenschicht.pdb
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\DiceRoller.pdb
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\Glücksrad.pdb
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\Highscore.pdb
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\IndividuellesFenster.pdb
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\Roulette0.0.8.pdb
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\Slot_Animation.pdb
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\Tastatur.pdb
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\EntityFramework.xml
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\zxing.pdb
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\zxing.xml
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\zxing.presentation.pdb
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\bin\Debug\zxing.presentation.xml
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\obj\Debug\Casino_Hauptmenue.csprojResolveAssemblyReference.cache
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\obj\Debug\Hauptmenu.g.cs
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\obj\Debug\App.g.cs
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\obj\Debug\Casino_Hauptmenue_MarkupCompile.cache
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\obj\Debug\Casino_Hauptmenue_MarkupCompile.lref
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\obj\Debug\Hauptmenu.baml
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\obj\Debug\Casino_Hauptmenue.g.resources
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\obj\Debug\Casino_Hauptmenue.Properties.Resources.resources
+C:\Users\Berni\Desktop\SpieleSuite\Casino_Hauptmenue\obj\Debug\Casino_Hauptmenue.csproj.GenerateResource.Cache

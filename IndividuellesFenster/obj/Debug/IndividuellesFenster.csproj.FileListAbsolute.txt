@@ -1,0 +1,28 @@
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\IndividuellesFenster\bin\Debug\IndividuellesFenster.exe.config
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\IndividuellesFenster\bin\Debug\IndividuellesFenster.exe
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\IndividuellesFenster\bin\Debug\IndividuellesFenster.pdb
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\IndividuellesFenster\obj\Debug\IndividuellesFenster.csprojResolveAssemblyReference.cache
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\IndividuellesFenster\obj\Debug\PopupFenster.g.cs
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\IndividuellesFenster\obj\Debug\App.g.cs
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\IndividuellesFenster\obj\Debug\IndividuellesFenster_MarkupCompile.cache
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\IndividuellesFenster\obj\Debug\IndividuellesFenster_MarkupCompile.lref
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\IndividuellesFenster\obj\Debug\PopupFenster.baml
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\IndividuellesFenster\obj\Debug\IndividuellesFenster.g.resources
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\IndividuellesFenster\obj\Debug\IndividuellesFenster.Properties.Resources.resources
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\IndividuellesFenster\obj\Debug\IndividuellesFenster.csproj.GenerateResource.Cache
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\IndividuellesFenster\obj\Debug\IndividuellesFenster.exe
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\IndividuellesFenster\obj\Debug\IndividuellesFenster.pdb
+C:\Users\Berni\Desktop\SpieleSuite\IndividuellesFenster\bin\Debug\IndividuellesFenster.exe.config
+C:\Users\Berni\Desktop\SpieleSuite\IndividuellesFenster\bin\Debug\IndividuellesFenster.exe
+C:\Users\Berni\Desktop\SpieleSuite\IndividuellesFenster\bin\Debug\IndividuellesFenster.pdb
+C:\Users\Berni\Desktop\SpieleSuite\IndividuellesFenster\obj\Debug\IndividuellesFenster.csprojResolveAssemblyReference.cache
+C:\Users\Berni\Desktop\SpieleSuite\IndividuellesFenster\obj\Debug\PopupFenster.g.cs
+C:\Users\Berni\Desktop\SpieleSuite\IndividuellesFenster\obj\Debug\App.g.cs
+C:\Users\Berni\Desktop\SpieleSuite\IndividuellesFenster\obj\Debug\IndividuellesFenster_MarkupCompile.cache
+C:\Users\Berni\Desktop\SpieleSuite\IndividuellesFenster\obj\Debug\IndividuellesFenster_MarkupCompile.lref
+C:\Users\Berni\Desktop\SpieleSuite\IndividuellesFenster\obj\Debug\PopupFenster.baml
+C:\Users\Berni\Desktop\SpieleSuite\IndividuellesFenster\obj\Debug\IndividuellesFenster.g.resources
+C:\Users\Berni\Desktop\SpieleSuite\IndividuellesFenster\obj\Debug\IndividuellesFenster.Properties.Resources.resources
+C:\Users\Berni\Desktop\SpieleSuite\IndividuellesFenster\obj\Debug\IndividuellesFenster.csproj.GenerateResource.Cache
+C:\Users\Berni\Desktop\SpieleSuite\IndividuellesFenster\obj\Debug\IndividuellesFenster.exe
+C:\Users\Berni\Desktop\SpieleSuite\IndividuellesFenster\obj\Debug\IndividuellesFenster.pdb

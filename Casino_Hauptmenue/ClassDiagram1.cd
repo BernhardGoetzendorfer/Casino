@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Datenschicht.GlobaleVariablen" Collapsed="true">
+    <Position X="4.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Glücksrad.Glücksrad_Fenster" Collapsed="true">
+    <Position X="4.25" Y="2.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Glücksrad.Sounds" Collapsed="true">
+    <Position X="0.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Highscore.ScoreList" Collapsed="true">
+    <Position X="7.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Highscore.HighscoreListe" Collapsed="true">
+    <Position X="8" Y="4.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Glücksrad.Sector" Collapsed="true">
+    <Position X="5.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Glücksrad.BegriffBefuellung" Collapsed="true">
+    <Position X="2.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Casino_Hauptmenue.Hauptmenu" Collapsed="true">
+    <Position X="0.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQwAAAAAAgSAABAgBAAAQBAIQABYAUAAISAgCaAABA=</HashCode>
+      <FileName>Hauptmenu.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

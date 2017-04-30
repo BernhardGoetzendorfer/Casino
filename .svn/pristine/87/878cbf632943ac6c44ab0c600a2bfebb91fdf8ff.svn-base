@@ -1,0 +1,228 @@
+﻿<Window x:Class="Casino_Hauptmenue.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Casino_Hauptmenue"
+        xmlns:cam="clr-namespace:WebEye.Controls.Wpf;assembly=WebEye.Controls.Wpf.WebCameraControl"
+        mc:Ignorable="d"
+        WindowStyle="None" ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen" 
+        WindowState="Maximized"
+        Title="MainWindow" Height="1024" Width="1280">
+
+    <Window.Background>
+        <ImageBrush ImageSource="./Image/Bild11.jpg"/>
+    </Window.Background>
+    <Grid>
+        <Grid Margin="245,50,218,172">
+            <cam:WebCameraControl Name="CamControl" Visibility="Hidden" Margin="195,10,245.2,413.6"/>
+        </Grid>
+        <ComboBox  Visibility="Hidden" x:Name="cbxcam" HorizontalAlignment="Left" Margin="1101,939,0,0" VerticalAlignment="Top" Width="120"/>
+
+        <Canvas>
+            <Image x:Name="iBack"  HorizontalAlignment="Left" Height="55" Margin="0" VerticalAlignment="Top" Width="55" Source="Image/logout.png" Canvas.Left="14" Canvas.Top="10" MouseDown="btnLogout" MouseLeave="Mausnormal" MouseMove="Mausaendern"/>
+            <Image x:Name="btnMute" HorizontalAlignment="Left" Height="55" Margin="0" VerticalAlignment="Top" Width="55" Source="Image/Volume_On1.png" Canvas.Left="14" Canvas.Top="69" MouseDown="btnSound" Visibility="Visible" MouseLeave="Mausnormal" MouseMove="Mausaendern"/>
+            <Image x:Name="btnMuteOn" HorizontalAlignment="Left" Height="55" Margin="0" VerticalAlignment="Top" Width="55" Source="Image/Volume_Off1.png" Canvas.Left="14" Canvas.Top="69" MouseDown="btnSound" Visibility="Hidden"/>
+            <Image x:Name="btnInfo" HorizontalAlignment="Left" Height="55" Margin="0" VerticalAlignment="Top" Width="55"  Canvas.Left="14" Canvas.Top="128" Source="Image/Info1.png" MouseDown="btnInfoMain" MouseLeave="Mausnormal" MouseMove="Mausaendern"/>
+        </Canvas>
+        <Button Content="" Margin="245,857,899,25" Click="btn_Roulette" MouseMove="Mausaendern" MouseLeave="Mausnormal">
+            <Button.Template>
+                <ControlTemplate>
+                    <Grid>
+                        <Ellipse   
+                       StrokeThickness="5" Name="eliRoulette">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="Image/03_Roulette.png" />
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+
+        <Button Content="" Margin="464,857,680,25" Click="btn_Glücksrad" MouseMove="Mausaendern" MouseLeave="Mausnormal">
+            <Button.Template>
+                <ControlTemplate>
+                    <Grid>
+                        <Ellipse   
+        					StrokeThickness="5" Name="eliGlücksrad">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="Image/04_Glücksrad.png"/>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+
+        <Button Content="" Margin="685,857,459,25" Click="btn_Escalero" MouseMove="Mausaendern" MouseLeave="Mausnormal">
+            <Button.Template>
+                <ControlTemplate>
+                    <Grid>
+                        <Ellipse   
+        					StrokeThickness="5" Name="eliEscalero">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="Image/05_Escalero.png"/>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+
+        <Button Content="" Margin="901,857,243,25" Click="btn_Slots" MouseMove="Mausaendern" MouseLeave="Mausnormal">
+            <Button.Template>
+                <ControlTemplate>
+                    <Grid>
+                        <Ellipse   
+        					StrokeThickness="5" Name="eliSlots">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="Image/06_Slotmaschine.png"/>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+
+        <Button Content="" Margin="50,716,1018,192" Click="btn_Highscore" MouseMove="Mausaendern" MouseLeave="Mausnormal">
+            <Button.Template>
+                <ControlTemplate>
+                    <Grid>
+                        <Grid.Background>
+                            <ImageBrush ImageSource="Image/07_Highscore.jpg"/>
+                        </Grid.Background>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Label x:Name="label1" Content="OvoCoins:" HorizontalAlignment="Left" Margin="989,779,0,0" VerticalAlignment="Top" Width="130" Foreground="#FFFFFEFE" FontFamily="Arial" FontSize="24" FontWeight="Bold"/>
+        <Label x:Name="lblOvocoins" Content="0" HorizontalAlignment="Left" Margin="1124,779,0,0" VerticalAlignment="Top" Width="124" Foreground="#FFFFFEFE" FontFamily="Arial" FontSize="24" FlowDirection="RightToLeft" FontWeight="Bold"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="76" Margin="1083,703,0,0" VerticalAlignment="Top" Width="93" Source="Image/08_Kamera.png" MouseUp="WebcamStart" MouseMove="Mausaendern" MouseLeave="Mausnormal"/>
+        <Canvas Name="cLogin" Background="#7F0C0C0C" Width="314" Height="100" Visibility="Hidden" HorizontalAlignment="Center" Margin="507,462,459,462">
+            <Label x:Name="lblLogin" Content="" Canvas.Left="10" Canvas.Top="10" Width="305" Background="{x:Null}" Foreground="White"/>
+            <Button x:Name="button" Content="Ok" Canvas.Left="114" Canvas.Top="70" Width="75" Click="LoginAusblenden"/>
+
+        </Canvas>
+    </Grid>
+
+</Window>
+
+<!--Laptop Auflösung-->
+<!--<Window x:Class="Casino_Hauptmenue.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Casino_Hauptmenue"
+        xmlns:cam="clr-namespace:WebEye.Controls.Wpf;assembly=WebEye.Controls.Wpf.WebCameraControl"
+        mc:Ignorable="d"
+        WindowStyle="None" ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen" 
+        Title="MainWindow" Height="768" Width="1024" WindowState="Maximized">
+
+    <Window.Background>
+        <ImageBrush ImageSource="./Image/Bild11.jpg"/>
+    </Window.Background>
+    <Canvas>
+        <Grid Canvas.Left="10" Height="768" Width="1024">
+            <cam:WebCameraControl Name="CamControl" Visibility="Hidden" Margin="195,10,245.2,413.6"/>
+        </Grid>
+        <ComboBox  Visibility="Hidden" x:Name="cbxcam" HorizontalAlignment="Left" Margin="1101,939,0,0" VerticalAlignment="Top" Width="120"/>
+
+        <Canvas>
+            <Image x:Name="iBack"  HorizontalAlignment="Left" Height="55" Margin="0" VerticalAlignment="Top" Width="55" Source="Image/logout.png" Canvas.Left="14" Canvas.Top="10" MouseDown="btnLogout"/>
+            <Image x:Name="btnMute" HorizontalAlignment="Left" Height="55" Margin="0" VerticalAlignment="Top" Width="55" Source="Image/Volume_On1.png" Canvas.Left="14" Canvas.Top="69" MouseDown="btnSound"/>
+            <Image x:Name="btnInfo" HorizontalAlignment="Left" Height="55" Margin="0" VerticalAlignment="Top" Width="55"  Canvas.Left="14" Canvas.Top="128" Source="Image/Info1.png" MouseDown="btnInfoMain"/>
+        </Canvas>
+        <Button Content="" Margin="0" Click="btn_Roulette" Canvas.Bottom="30" Canvas.Left="170" Width="110" Height="110">
+            <Button.Template>
+                <ControlTemplate>
+                    <Grid>
+                        <Ellipse   
+                       StrokeThickness="5" Name="eliRoulette">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="Image/03_Roulette.png" />
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+
+        <Button Content="" Margin="0" Click="btn_Glücksrad" Canvas.Bottom="30" Canvas.Left="350" Width="110" Height="110">
+            <Button.Template>
+                <ControlTemplate>
+                    <Grid>
+                        <Ellipse   
+        					StrokeThickness="5" Name="eliGlücksrad">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="Image/04_Glücksrad.png"/>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+
+        <Button Content="" Margin="0" Click="btn_Escalero" Canvas.Bottom="30" Canvas.Left="550" Width="110" Height="110">
+            <Button.Template>
+                <ControlTemplate>
+                    <Grid>
+                        <Ellipse   
+        					StrokeThickness="5" Name="eliEscalero">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="Image/05_Escalero.png"/>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+
+        <Button Content="" Margin="0" Click="btn_Slots" Canvas.Bottom="30" Canvas.Left="750" Width="110" Height="110">
+            <Button.Template>
+                <ControlTemplate>
+                    <Grid>
+                        <Ellipse   
+        					StrokeThickness="5" Name="eliSlots">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="Image/06_Slotmaschine.png"/>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+
+        <Button Content="" Margin="0" Click="btn_Highscore"  Canvas.Bottom="30" Canvas.Left="10" Width="198" Height="101" Canvas.Top="527">
+            <Button.Template>
+                <ControlTemplate>
+                    <Grid>
+                        <Grid.Background>
+                            <ImageBrush ImageSource="Image/07_Highscore.jpg"/>
+                        </Grid.Background>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Label x:Name="label1" Content="OvoCoins:" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Width="130" Foreground="#FFFFFEFE" FontFamily="Arial" FontSize="24" FontWeight="Bold" Canvas.Bottom="200" Canvas.Left="789" Canvas.Top="562"/>
+        <Label x:Name="lblOvocoins" Content="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="71" Foreground="#FFFFFEFE" FontFamily="Arial" FontSize="24" FlowDirection="RightToLeft" FontWeight="Bold" Canvas.Left="919" Canvas.Top="562"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="76" VerticalAlignment="Top" Width="93" Source="Image/08_Kamera.png" MouseUp="WebcamStart" RenderTransformOrigin="0.54,0.571" Canvas.Left="845" Canvas.Top="481"/>
+        <Canvas Name="cLogin" Background="#7F0C0C0C" Width="314" Height="100" Visibility="Hidden" HorizontalAlignment="Center" Margin="507,462,459,462">
+            <Label x:Name="lblLogin" Content="" Canvas.Left="10" Canvas.Top="10" Width="305" Background="{x:Null}" Foreground="White"/>
+            <Button x:Name="button" Content="Ok" Canvas.Left="114" Canvas.Top="70" Width="75" Click="LoginAusblenden"/>
+
+        </Canvas>
+    </Canvas>
+
+</Window>-->

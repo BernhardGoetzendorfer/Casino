@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbCasino_IN19ModelStoreContainer" CdmEntityContainer="dbCasino_IN19Entities">
+    <EntitySetMapping Name="tblQRCode">
+      <EntityTypeMapping TypeName="dbCasino_IN19Model.tblQRCode">
+        <MappingFragment StoreEntitySet="tblQRCode">
+          <ScalarProperty Name="Datum" ColumnName="Datum" />
+          <ScalarProperty Name="Eingeloggt" ColumnName="Eingeloggt" />
+          <ScalarProperty Name="Ovocoin" ColumnName="Ovocoin" />
+          <ScalarProperty Name="QRBAN" ColumnName="QRBAN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

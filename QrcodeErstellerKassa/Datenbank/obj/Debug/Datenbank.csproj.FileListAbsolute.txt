@@ -1,0 +1,18 @@
+C:\Manuel\AKT-Projekt\QrcodeErstellerKassa\Datenbank\bin\Debug\Datenbank.dll.config
+C:\Manuel\AKT-Projekt\QrcodeErstellerKassa\Datenbank\bin\Debug\Datenbank.dll
+C:\Manuel\AKT-Projekt\QrcodeErstellerKassa\Datenbank\bin\Debug\Datenbank.pdb
+C:\Manuel\AKT-Projekt\QrcodeErstellerKassa\Datenbank\bin\Debug\EntityFramework.dll
+C:\Manuel\AKT-Projekt\QrcodeErstellerKassa\Datenbank\bin\Debug\EntityFramework.SqlServer.dll
+C:\Manuel\AKT-Projekt\QrcodeErstellerKassa\Datenbank\bin\Debug\EntityFramework.xml
+C:\Manuel\AKT-Projekt\QrcodeErstellerKassa\Datenbank\bin\Debug\EntityFramework.SqlServer.xml
+C:\Manuel\AKT-Projekt\QrcodeErstellerKassa\Datenbank\obj\Debug\Datenbank.dll
+C:\Manuel\AKT-Projekt\QrcodeErstellerKassa\Datenbank\obj\Debug\Datenbank.pdb
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\QrcodeErstellerKassa\Datenbank\bin\Debug\Datenbank.dll.config
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\QrcodeErstellerKassa\Datenbank\bin\Debug\Datenbank.dll
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\QrcodeErstellerKassa\Datenbank\bin\Debug\Datenbank.pdb
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\QrcodeErstellerKassa\Datenbank\bin\Debug\EntityFramework.dll
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\QrcodeErstellerKassa\Datenbank\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\QrcodeErstellerKassa\Datenbank\bin\Debug\EntityFramework.xml
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\QrcodeErstellerKassa\Datenbank\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\QrcodeErstellerKassa\Datenbank\obj\Debug\Datenbank.dll
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\QrcodeErstellerKassa\Datenbank\obj\Debug\Datenbank.pdb

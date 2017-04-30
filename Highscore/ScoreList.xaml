@@ -1,0 +1,154 @@
+﻿<Window x:Class="Highscore.ScoreList"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+            xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+            xmlns:local="clr-namespace:Highscore"
+            mc:Ignorable="d" 
+            WindowStyle="None" ResizeMode="NoResize"
+            WindowStartupLocation="CenterScreen"
+            Title="Highscore" Height="1024" Width="1280" WindowState="Maximized">
+
+    <Window.Resources>
+        <Style x:Key="myHeaderStyle" TargetType="{x:Type GridViewColumnHeader}">
+            <Setter Property="Visibility" Value="Collapsed" />
+        </Style>
+    </Window.Resources>
+
+
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Image/HintergrundHighscore.png"/>
+        </Grid.Background>
+        <Grid>
+            <Canvas>
+                <Image x:Name="iBack"  HorizontalAlignment="Left" Height="55" Margin="0" VerticalAlignment="Top" Width="55" Source="Image/zurück.png" Canvas.Left="14" Canvas.Top="10" MouseDown="btnBeenden" MouseMove="Mausaendern" MouseLeave="Mausnormal"/>
+                <Image x:Name="Roulette" HorizontalAlignment="Left" Height="151" Margin="0" VerticalAlignment="Top" Width="181"  Canvas.Left="728" Canvas.Top="224" Source="Image/03_Roulette.png"  />
+                <Image x:Name="Gluecksrad" HorizontalAlignment="Left" Height="151" Margin="0" VerticalAlignment="Top" Width="181"  Canvas.Left="66" Canvas.Top="224" Source="Image/04_Glücksrad.png"  />
+                <Image x:Name="Escalero" HorizontalAlignment="Left" Height="151" Margin="0" VerticalAlignment="Top" Width="181"  Canvas.Left="388" Canvas.Top="224" Source="Image/05_Escalero.png"  />
+                <Image x:Name="Slotmaschine" HorizontalAlignment="Left" Height="151" Margin="0" VerticalAlignment="Top" Width="181"  Canvas.Left="1027" Canvas.Top="224" Source="Image/06_slotmaschine.png" RenderTransformOrigin="0.47,0.53"  />
+                <Label x:Name="label" Content="TOP 10" Canvas.Left="560" Canvas.Top="137" Height="55" Width="165" Foreground="White" FontSize="45" FontFamily="Arial"/>
+
+
+            </Canvas>
+
+            <ListView x:Name="lvGluecksrad" VerticalContentAlignment="Center" HorizontalAlignment="Right" Height="415" Margin="0,411,978,0" VerticalAlignment="Top" Width="292" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="24" Foreground="#FFF3C447">
+                <ListView.View>
+                    <GridView  ColumnHeaderContainerStyle="{StaticResource myHeaderStyle}" >
+                        <GridViewColumn DisplayMemberBinding="{Binding ID}" Width="auto" />
+                        <GridViewColumn DisplayMemberBinding="{Binding Name}"/>
+                        <GridViewColumn DisplayMemberBinding="{Binding Score}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
+            <ListView x:Name="lvEscalero" HorizontalAlignment="Left" Height="415" Margin="344,411,0,0" VerticalAlignment="Top" Width="290" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="24" Foreground="#FFF3C447" >
+                <ListView.View>
+                    <GridView  ColumnHeaderContainerStyle="{StaticResource myHeaderStyle}" >
+                        <GridViewColumn DisplayMemberBinding="{Binding ID}" />
+                        <GridViewColumn DisplayMemberBinding="{Binding Name}"/>
+                        <GridViewColumn DisplayMemberBinding="{Binding Score}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <ListView x:Name="lvRoulette" HorizontalAlignment="Left" Height="415" Margin="669,411,0,0" VerticalAlignment="Top" Width="288" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="24" Foreground="#FFF3C447">
+                <ListView.View>
+                    <GridView  ColumnHeaderContainerStyle="{StaticResource myHeaderStyle}">
+                        <GridViewColumn DisplayMemberBinding="{Binding ID}"/>
+                        <GridViewColumn DisplayMemberBinding="{Binding Name}"/>
+                        <GridViewColumn DisplayMemberBinding="{Binding Score}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <ListView x:Name="lvSlots" HorizontalAlignment="Left" Height="415" Margin="984,411,0,0" VerticalAlignment="Top" Width="286" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="24" Foreground="#FFF3C447" >
+                <ListView.View>
+                    <GridView  ColumnHeaderContainerStyle="{StaticResource myHeaderStyle}" >
+                        <GridViewColumn  DisplayMemberBinding="{Binding ID}"/>
+                        <GridViewColumn  DisplayMemberBinding="{Binding Name}"/>
+                        <GridViewColumn  DisplayMemberBinding="{Binding Score}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
+        </Grid>
+    </Grid>
+</Window>
+
+<!-- Laptop Auflösung-->
+<!--<Window x:Class="Highscore.ScoreList"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+            xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+            xmlns:local="clr-namespace:Highscore"
+            mc:Ignorable="d" 
+            WindowStyle="None" ResizeMode="NoResize"
+            WindowStartupLocation="CenterScreen"
+            Title="Highscore" Height="768" Width="1024" WindowState="Maximized">
+
+    <Window.Resources>
+        <Style x:Key="myHeaderStyle" TargetType="{x:Type GridViewColumnHeader}">
+            <Setter Property="Visibility" Value="Collapsed" />
+        </Style>
+    </Window.Resources>
+
+
+
+    <Canvas>
+        <Canvas.Background>
+            <ImageBrush ImageSource="./Image/HintergrundHighscore.png"/>
+        </Canvas.Background>
+        <Grid>
+            <Canvas>
+                <Image x:Name="iBack"  HorizontalAlignment="Left" Height="40" Margin="0" VerticalAlignment="Top" Width="40" Source="Image/zurück.png" Canvas.Left="14" Canvas.Top="10" MouseDown="btnBeenden"/>
+                <Image x:Name="btnInfo" HorizontalAlignment="Left" Height="40" Margin="0" VerticalAlignment="Top" Width="40"  Canvas.Left="14" Canvas.Top="86" Source="Image/Info.png" />
+            </Canvas>
+            <Label x:Name="label" Content="Top 10" HorizontalAlignment="Left" Margin="33,169,0,0" VerticalAlignment="Top" Foreground="White" FontSize="36" FontFamily="Arial" FontWeight="Bold"/>
+            <Label x:Name="label_Copy" Content="Top 10" HorizontalAlignment="Left" Margin="306,169,0,0" VerticalAlignment="Top" Foreground="White" FontSize="36" FontFamily="Arial" FontWeight="Bold"/>
+
+            <ListView x:Name="lvGluecksrad" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="308" Margin="14,257,0,0" VerticalAlignment="Top" Width="208" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="18" Foreground="Black">
+                <ListView.View>
+                    <GridView  ColumnHeaderContainerStyle="{StaticResource myHeaderStyle}" >
+                        <GridViewColumn DisplayMemberBinding="{Binding ID}" Width="auto" />
+                        <GridViewColumn DisplayMemberBinding="{Binding Name}"/>
+                        <GridViewColumn DisplayMemberBinding="{Binding Score}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
+            <ListView x:Name="lvEscalero" HorizontalAlignment="Left" Height="308" Margin="254,257,0,0" VerticalAlignment="Top" Width="244" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="18" Foreground="Black" >
+                <ListView.View>
+                    <GridView  ColumnHeaderContainerStyle="{StaticResource myHeaderStyle}" >
+                        <GridViewColumn DisplayMemberBinding="{Binding ID}" />
+                        <GridViewColumn DisplayMemberBinding="{Binding Name}"/>
+                        <GridViewColumn DisplayMemberBinding="{Binding Score}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
+            <Label x:Name="label_Copy1" Content="Top 10" HorizontalAlignment="Left" Margin="581,169,0,0" VerticalAlignment="Top" Foreground="White" FontSize="36" FontFamily="Arial" FontWeight="Bold"/>
+            <ListView x:Name="lvRoulette" HorizontalAlignment="Left" Height="308" Margin="525,257,0,0" VerticalAlignment="Top" Width="213" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="18" Foreground="Black">
+                <ListView.View>
+                    <GridView  ColumnHeaderContainerStyle="{StaticResource myHeaderStyle}">
+                        <GridViewColumn DisplayMemberBinding="{Binding ID}"/>
+                        <GridViewColumn DisplayMemberBinding="{Binding Name}"/>
+                        <GridViewColumn DisplayMemberBinding="{Binding Score}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
+            <Label x:Name="label_Copy2" Content="Top 10" HorizontalAlignment="Left" Margin="820,169,0,0" VerticalAlignment="Top" Foreground="White" FontSize="36" FontFamily="Arial" FontWeight="Bold"/>
+            <ListView x:Name="lvSlots" HorizontalAlignment="Left" Height="308" Margin="771,257,0,0" VerticalAlignment="Top" Width="220" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="18" Foreground="Black" >
+                <ListView.View>
+                    <GridView  ColumnHeaderContainerStyle="{StaticResource myHeaderStyle}" >
+                        <GridViewColumn  DisplayMemberBinding="{Binding ID}"/>
+                        <GridViewColumn  DisplayMemberBinding="{Binding Name}"/>
+                        <GridViewColumn  DisplayMemberBinding="{Binding Score}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
+        </Grid>
+    </Canvas>
+</Window>-->

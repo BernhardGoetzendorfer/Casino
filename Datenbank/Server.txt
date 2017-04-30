@@ -1,0 +1,7 @@
+Webserver
+FTP Server
+
+
+
+IP 192.168.188.10	Infserver
+User: in19user		Password: 246user!  neues: S1cherhe1t!

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Glücksrad.Star">
+    <Position X="8.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAQAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Star.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Glücksrad.Sounds">
+    <Position X="4.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAEIAAABAAAABAAAAAA=</HashCode>
+      <FileName>Sounds.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Glücksrad.Sector">
+    <Position X="6.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAQ=</HashCode>
+      <FileName>Sector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Glücksrad.Glücksrad_Fenster">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>IQIWABAAAABQGgEIQAwhAAhAQAAIUIAgAAFEsSCOgAA=</HashCode>
+      <FileName>Glücksrad_Fenster.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

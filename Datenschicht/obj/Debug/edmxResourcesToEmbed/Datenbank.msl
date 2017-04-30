@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbCasino_IN19ModelStoreContainer" CdmEntityContainer="dbCasino_IN19Entities">
+    <EntitySetMapping Name="tblBegriff">
+      <EntityTypeMapping TypeName="dbCasino_IN19Model.tblBegriff">
+        <MappingFragment StoreEntitySet="tblBegriff">
+          <ScalarProperty Name="IDBegriff" ColumnName="IDBegriff" />
+          <ScalarProperty Name="Begriff" ColumnName="Begriff" />
+          <ScalarProperty Name="FKKategorie" ColumnName="FKKategorie" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblHighscore">
+      <EntityTypeMapping TypeName="dbCasino_IN19Model.tblHighscore">
+        <MappingFragment StoreEntitySet="tblHighscore">
+          <ScalarProperty Name="IDHighscore" ColumnName="IDHighscore" />
+          <ScalarProperty Name="FKSpiel" ColumnName="FKSpiel" />
+          <ScalarProperty Name="Spieler" ColumnName="Spieler" />
+          <ScalarProperty Name="Punkte" ColumnName="Punkte" />
+          <ScalarProperty Name="Datum" ColumnName="Datum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblkategorie">
+      <EntityTypeMapping TypeName="dbCasino_IN19Model.tblkategorie">
+        <MappingFragment StoreEntitySet="tblkategorie">
+          <ScalarProperty Name="IDKategorie" ColumnName="IDKategorie" />
+          <ScalarProperty Name="Kategorie" ColumnName="Kategorie" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblQRCode">
+      <EntityTypeMapping TypeName="dbCasino_IN19Model.tblQRCode">
+        <MappingFragment StoreEntitySet="tblQRCode">
+          <ScalarProperty Name="QRBAN" ColumnName="QRBAN" />
+          <ScalarProperty Name="Ovocoin" ColumnName="Ovocoin" />
+          <ScalarProperty Name="Eingeloggt" ColumnName="Eingeloggt" />
+          <ScalarProperty Name="Datum" ColumnName="Datum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSpiel">
+      <EntityTypeMapping TypeName="dbCasino_IN19Model.tblSpiel">
+        <MappingFragment StoreEntitySet="tblSpiel">
+          <ScalarProperty Name="IDSpiel" ColumnName="IDSpiel" />
+          <ScalarProperty Name="Spiel" ColumnName="Spiel" />
+          <ScalarProperty Name="Ovocoin" ColumnName="Ovocoin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="fTop100" FunctionName="dbCasino_IN19Model.Store.fTop100">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbCasino_IN19Model.fTop100_Result">
+          <ScalarProperty Name="Punkte" ColumnName="Punkte" />
+          <ScalarProperty Name="FKSpiel" ColumnName="FKSpiel" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="pTop100Wert" FunctionName="dbCasino_IN19Model.Store.pTop100Wert" />
+    <FunctionImportMapping FunctionImportName="fTop100Neu" FunctionName="dbCasino_IN19Model.Store.fTop100Neu">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbCasino_IN19Model.fTop100Neu_Result">
+          <ScalarProperty Name="Punkte" ColumnName="Punkte" />
+          <ScalarProperty Name="FKSpiel" ColumnName="FKSpiel" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="pTop100WertNeu" FunctionName="dbCasino_IN19Model.Store.pTop100WertNeu" />
+  </EntityContainerMapping>
+</Mapping>

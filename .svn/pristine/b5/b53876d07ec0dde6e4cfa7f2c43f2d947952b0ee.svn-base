@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="dbCasino_IN19Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tblBegriff">
+          <Key>
+            <PropertyRef Name="IDBegriff" />
+          </Key>
+          <Property Name="IDBegriff" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Begriff" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="FKKategorie" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblHighscore">
+          <Key>
+            <PropertyRef Name="IDHighscore" />
+          </Key>
+          <Property Name="IDHighscore" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FKSpiel" Type="int" />
+          <Property Name="Spieler" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Punkte" Type="float" Nullable="false" />
+          <Property Name="Datum" Type="smalldatetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblkategorie">
+          <Key>
+            <PropertyRef Name="IDKategorie" />
+          </Key>
+          <Property Name="IDKategorie" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Kategorie" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblQRCode">
+          <Key>
+            <PropertyRef Name="QRBAN" />
+          </Key>
+          <Property Name="QRBAN" Type="char" MaxLength="14" Nullable="false" />
+          <Property Name="Ovocoin" Type="float" Nullable="false" />
+          <Property Name="Eingeloggt" Type="bit" Nullable="false" />
+          <Property Name="Datum" Type="smalldatetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblSpiel">
+          <Key>
+            <PropertyRef Name="IDSpiel" />
+          </Key>
+          <Property Name="IDSpiel" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Spiel" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Ovocoin" Type="float" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__tblBegrif__FKKat__3C69FB99">
+          <End Role="tblkategorie" Type="Self.tblkategorie" Multiplicity="1" />
+          <End Role="tblBegriff" Type="Self.tblBegriff" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblkategorie">
+              <PropertyRef Name="IDKategorie" />
+            </Principal>
+            <Dependent Role="tblBegriff">
+              <PropertyRef Name="FKKategorie" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblHighsc__FKSpi__4222D4EF">
+          <End Role="tblSpiel" Type="Self.tblSpiel" Multiplicity="0..1" />
+          <End Role="tblHighscore" Type="Self.tblHighscore" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSpiel">
+              <PropertyRef Name="IDSpiel" />
+            </Principal>
+            <Dependent Role="tblHighscore">
+              <PropertyRef Name="FKSpiel" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="fTop100" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="refSpiel" Type="varchar" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="Punkte" Type="float" Nullable="false" />
+                <Property Name="FKSpiel" Type="int" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="fTop100Neu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="refSpiel" Type="int" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="Punkte" Type="float" Nullable="false" />
+                <Property Name="FKSpiel" Type="int" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="pTop100Wert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="refSpiel" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="pTop100WertNeu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="refSpiel" Type="int" Mode="In" />
+          <Parameter Name="Score" Type="float" Mode="InOut" />
+        </Function>
+        <EntityContainer Name="dbCasino_IN19ModelStoreContainer">
+          <EntitySet Name="tblBegriff" EntityType="Self.tblBegriff" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblHighscore" EntityType="Self.tblHighscore" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblkategorie" EntityType="Self.tblkategorie" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblQRCode" EntityType="Self.tblQRCode" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblSpiel" EntityType="Self.tblSpiel" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__tblBegrif__FKKat__3C69FB99" Association="Self.FK__tblBegrif__FKKat__3C69FB99">
+            <End Role="tblkategorie" EntitySet="tblkategorie" />
+            <End Role="tblBegriff" EntitySet="tblBegriff" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblHighsc__FKSpi__4222D4EF" Association="Self.FK__tblHighsc__FKSpi__4222D4EF">
+            <End Role="tblSpiel" EntitySet="tblSpiel" />
+            <End Role="tblHighscore" EntitySet="tblHighscore" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="dbCasino_IN19Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tblBegriff">
+          <Key>
+            <PropertyRef Name="IDBegriff" />
+          </Key>
+          <Property Name="IDBegriff" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Begriff" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FKKategorie" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tblkategorie" Relationship="Self.FK__tblBegrif__FKKat__3C69FB99" FromRole="tblBegriff" ToRole="tblkategorie" />
+        </EntityType>
+        <EntityType Name="tblHighscore">
+          <Key>
+            <PropertyRef Name="IDHighscore" />
+          </Key>
+          <Property Name="IDHighscore" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FKSpiel" Type="Int32" />
+          <Property Name="Spieler" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Punkte" Type="Double" Nullable="false" />
+          <Property Name="Datum" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="tblSpiel" Relationship="Self.FK__tblHighsc__FKSpi__4222D4EF" FromRole="tblHighscore" ToRole="tblSpiel" />
+        </EntityType>
+        <EntityType Name="tblkategorie">
+          <Key>
+            <PropertyRef Name="IDKategorie" />
+          </Key>
+          <Property Name="IDKategorie" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Kategorie" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tblBegriff" Relationship="Self.FK__tblBegrif__FKKat__3C69FB99" FromRole="tblkategorie" ToRole="tblBegriff" />
+        </EntityType>
+        <EntityType Name="tblQRCode">
+          <Key>
+            <PropertyRef Name="QRBAN" />
+          </Key>
+          <Property Name="QRBAN" Type="String" MaxLength="14" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Ovocoin" Type="Double" Nullable="false" />
+          <Property Name="Eingeloggt" Type="Boolean" Nullable="false" />
+          <Property Name="Datum" Type="DateTime" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="tblSpiel">
+          <Key>
+            <PropertyRef Name="IDSpiel" />
+          </Key>
+          <Property Name="IDSpiel" Type="Int32" annotation:StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Spiel" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Ovocoin" Type="Double" Nullable="false" />
+          <NavigationProperty Name="tblHighscore" Relationship="Self.FK__tblHighsc__FKSpi__4222D4EF" FromRole="tblSpiel" ToRole="tblHighscore" />
+        </EntityType>
+        <Association Name="FK__tblBegrif__FKKat__3C69FB99">
+          <End Role="tblkategorie" Type="Self.tblkategorie" Multiplicity="1" />
+          <End Role="tblBegriff" Type="Self.tblBegriff" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblkategorie">
+              <PropertyRef Name="IDKategorie" />
+            </Principal>
+            <Dependent Role="tblBegriff">
+              <PropertyRef Name="FKKategorie" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblHighsc__FKSpi__4222D4EF">
+          <End Role="tblSpiel" Type="dbCasino_IN19Model.tblSpiel" Multiplicity="0..1" />
+          <End Role="tblHighscore" Type="Self.tblHighscore" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSpiel">
+              <PropertyRef Name="IDSpiel" />
+            </Principal>
+            <Dependent Role="tblHighscore">
+              <PropertyRef Name="FKSpiel" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="dbCasino_IN19Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tblBegriff" EntityType="Self.tblBegriff" />
+          <EntitySet Name="tblHighscore" EntityType="Self.tblHighscore" />
+          <EntitySet Name="tblkategorie" EntityType="Self.tblkategorie" />
+          <EntitySet Name="tblQRCode" EntityType="Self.tblQRCode" />
+          <EntitySet Name="tblSpiel" EntityType="dbCasino_IN19Model.tblSpiel" />
+          <AssociationSet Name="FK__tblBegrif__FKKat__3C69FB99" Association="Self.FK__tblBegrif__FKKat__3C69FB99">
+            <End Role="tblkategorie" EntitySet="tblkategorie" />
+            <End Role="tblBegriff" EntitySet="tblBegriff" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblHighsc__FKSpi__4222D4EF" Association="Self.FK__tblHighsc__FKSpi__4222D4EF">
+            <End Role="tblSpiel" EntitySet="tblSpiel" />
+            <End Role="tblHighscore" EntitySet="tblHighscore" />
+          </AssociationSet>
+          <FunctionImport Name="fTop100" IsComposable="true" ReturnType="Collection(dbCasino_IN19Model.fTop100_Result)">
+          <Parameter Name="refSpiel" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="pTop100Wert" ReturnType="Collection(Double)">
+          <Parameter Name="refSpiel" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="fTop100Neu" IsComposable="true" ReturnType="Collection(dbCasino_IN19Model.fTop100Neu_Result)">
+          <Parameter Name="refSpiel" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="pTop100WertNeu">
+            <Parameter Name="refSpiel" Mode="In" Type="Int32" />
+            <Parameter Name="Score" Mode="InOut" Type="Double" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="fTop100_Result">
+          <Property Type="Double" Name="Punkte" Nullable="false" />
+          <Property Type="Int32" Name="FKSpiel" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="fTop100Neu_Result">
+          <Property Type="Double" Name="Punkte" Nullable="false" />
+          <Property Type="Int32" Name="FKSpiel" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="dbCasino_IN19ModelStoreContainer" CdmEntityContainer="dbCasino_IN19Entities">
+          <EntitySetMapping Name="tblBegriff">
+            <EntityTypeMapping TypeName="dbCasino_IN19Model.tblBegriff">
+              <MappingFragment StoreEntitySet="tblBegriff">
+                <ScalarProperty Name="IDBegriff" ColumnName="IDBegriff" />
+                <ScalarProperty Name="Begriff" ColumnName="Begriff" />
+                <ScalarProperty Name="FKKategorie" ColumnName="FKKategorie" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblHighscore">
+            <EntityTypeMapping TypeName="dbCasino_IN19Model.tblHighscore">
+              <MappingFragment StoreEntitySet="tblHighscore">
+                <ScalarProperty Name="IDHighscore" ColumnName="IDHighscore" />
+                <ScalarProperty Name="FKSpiel" ColumnName="FKSpiel" />
+                <ScalarProperty Name="Spieler" ColumnName="Spieler" />
+                <ScalarProperty Name="Punkte" ColumnName="Punkte" />
+                <ScalarProperty Name="Datum" ColumnName="Datum" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblkategorie">
+            <EntityTypeMapping TypeName="dbCasino_IN19Model.tblkategorie">
+              <MappingFragment StoreEntitySet="tblkategorie">
+                <ScalarProperty Name="IDKategorie" ColumnName="IDKategorie" />
+                <ScalarProperty Name="Kategorie" ColumnName="Kategorie" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblQRCode">
+            <EntityTypeMapping TypeName="dbCasino_IN19Model.tblQRCode">
+              <MappingFragment StoreEntitySet="tblQRCode">
+                <ScalarProperty Name="QRBAN" ColumnName="QRBAN" />
+                <ScalarProperty Name="Ovocoin" ColumnName="Ovocoin" />
+                <ScalarProperty Name="Eingeloggt" ColumnName="Eingeloggt" />
+                <ScalarProperty Name="Datum" ColumnName="Datum" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSpiel">
+            <EntityTypeMapping TypeName="dbCasino_IN19Model.tblSpiel">
+              <MappingFragment StoreEntitySet="tblSpiel">
+                <ScalarProperty Name="IDSpiel" ColumnName="IDSpiel" />
+                <ScalarProperty Name="Spiel" ColumnName="Spiel" />
+                <ScalarProperty Name="Ovocoin" ColumnName="Ovocoin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="fTop100" FunctionName="dbCasino_IN19Model.Store.fTop100">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="dbCasino_IN19Model.fTop100_Result">
+                <ScalarProperty Name="Punkte" ColumnName="Punkte" />
+                <ScalarProperty Name="FKSpiel" ColumnName="FKSpiel" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="pTop100Wert" FunctionName="dbCasino_IN19Model.Store.pTop100Wert" />
+          <FunctionImportMapping FunctionImportName="fTop100Neu" FunctionName="dbCasino_IN19Model.Store.fTop100Neu">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="dbCasino_IN19Model.fTop100Neu_Result">
+                <ScalarProperty Name="Punkte" ColumnName="Punkte" />
+                <ScalarProperty Name="FKSpiel" ColumnName="FKSpiel" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="pTop100WertNeu" FunctionName="dbCasino_IN19Model.Store.pTop100WertNeu" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

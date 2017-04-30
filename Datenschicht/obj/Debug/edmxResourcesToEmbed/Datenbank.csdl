@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbCasino_IN19Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tblBegriff">
+    <Key>
+      <PropertyRef Name="IDBegriff" />
+    </Key>
+    <Property Name="IDBegriff" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Begriff" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FKKategorie" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblkategorie" Relationship="Self.FK__tblBegrif__FKKat__3C69FB99" FromRole="tblBegriff" ToRole="tblkategorie" />
+  </EntityType>
+  <EntityType Name="tblHighscore">
+    <Key>
+      <PropertyRef Name="IDHighscore" />
+    </Key>
+    <Property Name="IDHighscore" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FKSpiel" Type="Int32" />
+    <Property Name="Spieler" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Punkte" Type="Double" Nullable="false" />
+    <Property Name="Datum" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="tblSpiel" Relationship="Self.FK__tblHighsc__FKSpi__4222D4EF" FromRole="tblHighscore" ToRole="tblSpiel" />
+  </EntityType>
+  <EntityType Name="tblkategorie">
+    <Key>
+      <PropertyRef Name="IDKategorie" />
+    </Key>
+    <Property Name="IDKategorie" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Kategorie" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="tblBegriff" Relationship="Self.FK__tblBegrif__FKKat__3C69FB99" FromRole="tblkategorie" ToRole="tblBegriff" />
+  </EntityType>
+  <EntityType Name="tblQRCode">
+    <Key>
+      <PropertyRef Name="QRBAN" />
+    </Key>
+    <Property Name="QRBAN" Type="String" MaxLength="14" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Ovocoin" Type="Double" Nullable="false" />
+    <Property Name="Eingeloggt" Type="Boolean" Nullable="false" />
+    <Property Name="Datum" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="tblSpiel">
+    <Key>
+      <PropertyRef Name="IDSpiel" />
+    </Key>
+    <Property Name="IDSpiel" Type="Int32" annotation:StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Spiel" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Ovocoin" Type="Double" Nullable="false" />
+    <NavigationProperty Name="tblHighscore" Relationship="Self.FK__tblHighsc__FKSpi__4222D4EF" FromRole="tblSpiel" ToRole="tblHighscore" />
+  </EntityType>
+  <Association Name="FK__tblBegrif__FKKat__3C69FB99">
+    <End Role="tblkategorie" Type="Self.tblkategorie" Multiplicity="1" />
+    <End Role="tblBegriff" Type="Self.tblBegriff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblkategorie">
+        <PropertyRef Name="IDKategorie" />
+      </Principal>
+      <Dependent Role="tblBegriff">
+        <PropertyRef Name="FKKategorie" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblHighsc__FKSpi__4222D4EF">
+    <End Role="tblSpiel" Type="dbCasino_IN19Model.tblSpiel" Multiplicity="0..1" />
+    <End Role="tblHighscore" Type="Self.tblHighscore" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSpiel">
+        <PropertyRef Name="IDSpiel" />
+      </Principal>
+      <Dependent Role="tblHighscore">
+        <PropertyRef Name="FKSpiel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="dbCasino_IN19Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblBegriff" EntityType="Self.tblBegriff" />
+    <EntitySet Name="tblHighscore" EntityType="Self.tblHighscore" />
+    <EntitySet Name="tblkategorie" EntityType="Self.tblkategorie" />
+    <EntitySet Name="tblQRCode" EntityType="Self.tblQRCode" />
+    <EntitySet Name="tblSpiel" EntityType="dbCasino_IN19Model.tblSpiel" />
+    <AssociationSet Name="FK__tblBegrif__FKKat__3C69FB99" Association="Self.FK__tblBegrif__FKKat__3C69FB99">
+      <End Role="tblkategorie" EntitySet="tblkategorie" />
+      <End Role="tblBegriff" EntitySet="tblBegriff" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblHighsc__FKSpi__4222D4EF" Association="Self.FK__tblHighsc__FKSpi__4222D4EF">
+      <End Role="tblSpiel" EntitySet="tblSpiel" />
+      <End Role="tblHighscore" EntitySet="tblHighscore" />
+    </AssociationSet>
+    <FunctionImport Name="fTop100" IsComposable="true" ReturnType="Collection(dbCasino_IN19Model.fTop100_Result)">
+      <Parameter Name="refSpiel" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="pTop100Wert" ReturnType="Collection(Double)">
+      <Parameter Name="refSpiel" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="fTop100Neu" IsComposable="true" ReturnType="Collection(dbCasino_IN19Model.fTop100Neu_Result)">
+      <Parameter Name="refSpiel" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="pTop100WertNeu">
+      <Parameter Name="refSpiel" Mode="In" Type="Int32" />
+      <Parameter Name="Score" Mode="InOut" Type="Double" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="fTop100_Result">
+    <Property Type="Double" Name="Punkte" Nullable="false" />
+    <Property Type="Int32" Name="FKSpiel" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="fTop100Neu_Result">
+    <Property Type="Double" Name="Punkte" Nullable="false" />
+    <Property Type="Int32" Name="FKSpiel" Nullable="true" />
+  </ComplexType>
+</Schema>

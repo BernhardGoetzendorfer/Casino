@@ -1,0 +1,300 @@
+﻿<Window x:Class="Würfelpoker.Escalero"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Würfelpoker"
+        mc:Ignorable="d"
+        Title="Escalero" Height="1024" Width="1280" WindowStartupLocation="CenterScreen"
+        WindowStyle="None" ResizeMode="NoResize">
+
+    <Window.Resources>
+        <!-- This style is used for buttons, to remove the WPF default 'animated' mouse over effect -->
+        <Style x:Key="MoKorrektur" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" 
+                            
+                            Padding="4,2" 
+                            CornerRadius="3" 
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="Black" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+
+
+    <Grid>
+        <Image x:Name="Hintergrund" HorizontalAlignment="Left" Height="1028" VerticalAlignment="Top" Width="1397" Source="Hintergrund/Hintergrund.png" Margin="0,-4,-117,0"/>
+        <Image x:Name="Brett" HorizontalAlignment="Left" Height="661" Margin="22,190,0,0" VerticalAlignment="Top" Width="687" Source="Hintergrund/Brett.png"/>
+
+        <TextBlock Height="35" HorizontalAlignment="Left" Margin="565,145,0,0" Name="textBlock1"  VerticalAlignment="Top" Width="87" />
+
+        <Label x:Name="lblHighscore1" Content="" HorizontalAlignment="Left" Margin="784,14,0,0" VerticalAlignment="Top" Foreground="#FFF3C447" Width="266" FontSize="32"/>
+        <Label x:Name="lblHighscore2" Content="" HorizontalAlignment="Left" Margin="784,67,0,0" VerticalAlignment="Top" Foreground="#FFF3C447" Width="266" FontSize="32"/>
+        <Label x:Name="lblHighscore3" Content="" HorizontalAlignment="Left" Margin="784,120,0,0" VerticalAlignment="Top" Foreground="#FFF3C447" Width="266" FontSize="32"/>
+        <Label x:Name="lblHighscorePunkte1" Content="" HorizontalAlignment="Left" Margin="1055,14,0,0" VerticalAlignment="Top" Foreground="#FFF3C447" Width="180" FontSize="32" HorizontalContentAlignment="Right"/>
+        <Label x:Name="lblHighscorePunkte2" Content="" HorizontalAlignment="Left" Margin="1055,67,0,0" VerticalAlignment="Top" Foreground="#FFF3C447" Width="180" FontSize="32" HorizontalContentAlignment="Right"/>
+        <Label x:Name="lblHighscorePunkte3" Content="" HorizontalAlignment="Left" Margin="1055,120,0,0" VerticalAlignment="Top" Foreground="#FFF3C447" Width="180" FontSize="32" HorizontalContentAlignment="Right"/>
+
+        <!--<StackPanel Button.Click="btnErsterWurf_Click"  >-->
+        <Grid Button.Click="btnErsterWurf_Click">
+            <Button Content="" x:Name="btnErsterWurf" Style="{StaticResource MoKorrektur}" RenderTransformOrigin="0.546,0.488" Visibility="Visible" Height="140" Width="320" Cursor="Hand" Margin="397,806,563,78">
+                <Button.Background>
+                    <ImageBrush ImageSource="Bilder/wurfbutton1.png" Stretch="Uniform"/>
+                </Button.Background>
+
+            </Button>
+            <Button Content="" x:Name="btnZweiterWurf" Style="{StaticResource MoKorrektur}" RenderTransformOrigin="0.546,0.488" Visibility="Collapsed" Height="130" Width="320" Cursor="Hand" Margin="397,806,563,78">
+                <Button.BorderBrush>
+                    <ImageBrush/>
+                </Button.BorderBrush>
+                <Button.Background>
+                    <ImageBrush ImageSource="Bilder/wurfbutton2.png"/>
+                </Button.Background>
+            </Button>
+            <Button Content="" x:Name="btnDritterWurf" Style="{StaticResource MoKorrektur}"  RenderTransformOrigin="0.546,0.488" Visibility="Collapsed" Height="130" Width="320" Cursor="Hand" Margin="397,806,563,78"  >
+                <Button.BorderBrush>
+                    <ImageBrush />
+                </Button.BorderBrush>
+                <Button.Background>
+                    <ImageBrush ImageSource="Bilder/wurfbutton3.png"/>
+                </Button.Background>
+            </Button>
+        </Grid>
+        <!--</StackPanel>-->
+
+        <Button x:Name="btnStreichen" Content="Streichen" Style="{StaticResource MoKorrektur}" HorizontalAlignment="Left" Margin="898,806,0,0" VerticalAlignment="Top" Height="140" Width="320" Visibility="Collapsed" Click="btnStreichen_Click" OpacityMask="Black"  >
+            <Button.Foreground>
+                <ImageBrush/>
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <ImageBrush/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <ImageBrush ImageSource="Bilder/streichen.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnStreichAbbrechen" Content="Abbrechen" Style="{StaticResource MoKorrektur}" HorizontalAlignment="Left" Margin="898,806,0,0" VerticalAlignment="Top" Height="140" Width="320" Visibility="Collapsed" Click="btnStreichAbbrechen_Click"  >
+            <Button.Foreground>
+                <ImageBrush/>
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <ImageBrush/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <ImageBrush ImageSource="Bilder/abbrechen.png"/>
+            </Button.Background>
+        </Button>
+
+        <Rectangle x:Name="rectW1" Fill="Red" HorizontalAlignment="Left" Height="80" Margin="229,405,0,0" Stroke="Yellow" VerticalAlignment="Top" Width="80" StrokeThickness="1"/>
+        <Image Height="70" HorizontalAlignment="Left" Margin="234,410,0,0" Name="image1" VerticalAlignment="Top" Width="70" RenderTransformOrigin="0.5,0.5" MouseDown="image1_MouseDown">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <!--<RotateTransform Angle="0.399"/>-->
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+
+        <Rectangle x:Name="rectW2" Fill="Red" HorizontalAlignment="Left" Height="80" Margin="340,473,0,0" Stroke="Yellow" VerticalAlignment="Top" Width="80" StrokeThickness="1"/>
+        <Image Height="70" HorizontalAlignment="Left" Margin="345,478,0,0" Name="image2" Stretch="UniformToFill" VerticalAlignment="Top" Width="70" RenderTransformOrigin="0.5,0.5"  MouseDown="image2_MouseDown">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <!--<RotateTransform Angle="0.428"/>-->
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+
+        <Rectangle x:Name="rectW3" Fill="Red" HorizontalAlignment="Left" Height="80" Margin="452,405,0,0" Stroke="Yellow" VerticalAlignment="Top" Width="80" StrokeThickness="1"/>
+        <Image Height="70" HorizontalAlignment="Left" Margin="457,410,0,0" x:Name="image3" VerticalAlignment="Top" Width="70" RenderTransformOrigin="0.512,0.557"  MouseDown="image3_MouseDown">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <!--<RotateTransform Angle="0.742"/>-->
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+
+        <Rectangle x:Name="rectW4" Fill="Red" HorizontalAlignment="Left" Height="80" Margin="229,535,0,0" Stroke="Yellow" VerticalAlignment="Top" Width="80" StrokeThickness="1"/>
+        <Image Height="70" HorizontalAlignment="Left" Margin="234,540,0,0" x:Name="image4" Stretch="UniformToFill" VerticalAlignment="Top" Width="70" RenderTransformOrigin="0.5,0.5"  MouseDown="image4_MouseDown">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <!--<RotateTransform Angle="-0.529"/>-->
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+
+        <Rectangle x:Name="rectW5" Fill="Red" HorizontalAlignment="Left" Height="80" Margin="452,535,0,0" Stroke="Yellow" VerticalAlignment="Top" Width="80" StrokeThickness="1"/>
+        <Image Height="70" HorizontalAlignment="Left" Margin="457,540,0,0" x:Name="image5" Stretch="UniformToFill" VerticalAlignment="Top" Width="70" RenderTransformOrigin="0.5,0.5" MouseDown="image5_MouseDown">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <!--<RotateTransform Angle="-0.484"/>-->
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+
+
+        <Image x:Name="image" HorizontalAlignment="Left" Height="624" Margin="754,190,0,0" VerticalAlignment="Top" Width="526" Source="Hintergrund/Streichliste_Fertig.png"/>
+        <Canvas HorizontalAlignment="Left" Height="100" Margin="144,540,0,0" VerticalAlignment="Top" Width="100"/>
+        <Canvas>
+            <Image x:Name="btnZurueck" HorizontalAlignment="Left" Height="55" Margin="0" VerticalAlignment="Top" Width="55" Source="Hintergrund/Pfeil.png" Canvas.Left="14" Canvas.Top="10" MouseLeftButtonDown="btnzurueck_Click"/>
+            <Image x:Name="btnMute" HorizontalAlignment="Left" Height="55" Margin="0" VerticalAlignment="Top" Width="55" Source="Hintergrund/Volume_On.png" Canvas.Left="14" Canvas.Top="69" MouseDown="btnSound"/>
+            <Image x:Name="btnInfo" HorizontalAlignment="Left" Height="55" Margin="0" VerticalAlignment="Top" Width="55" Source="Hintergrund/Info.png" Canvas.Left="14" Canvas.Top="128"/>
+        </Canvas>
+        <Image x:Name="image6" HorizontalAlignment="Left" Height="347" Margin="1070,526,-67,0" VerticalAlignment="Top" Width="277" Source="Hintergrund/Kugelschreiber.png" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-144.426"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+
+        <StackPanel x:Name="Streichtabelle" MouseLeftButtonDown="Streichtabelle_Click" >
+            <Grid x:Name="StreichGrid" >
+                <TextBox x:Name="TxTNeunEins" HorizontalAlignment="Left" Height="34" Margin="964,352,0,638" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  Width="64"  RenderTransformOrigin="0.5,0.5" Background="{x:Null}" FontFamily="Rage Italic" FontSize="29.333" TextAlignment="Center" FontWeight="ExtraBlack"/>
+                <TextBox x:Name="TxTNeunZwei" Height="34" Margin="0,352,189,638" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.492,0.471" Background="{x:Null}" HorizontalAlignment="Right" Width="63" TextAlignment="Center" FontFamily="Rage Italic" FontWeight="ExtraBlack" FontSize="29.333"/>
+                <TextBox x:Name="TxTNeunDrei" Height="34" Margin="0,352,126,638" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.508,0.5" Background="{x:Null}" HorizontalAlignment="Right" Width="63" TextAlignment="Center" FontFamily="Rage Italic" FontWeight="ExtraBlack" FontSize="29.333"/>
+                <TextBox x:Name="TxTZehnEins" HorizontalAlignment="Left" Height="34" Margin="964,386,0,604" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  Width="64"  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" FontFamily="Rage Italic" FontSize="29.333" FontWeight="ExtraBlack" TextAlignment="Center"/>
+                <TextBox x:Name="TxTZehnZwei" Height="34" Margin="0,386,189,604" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" HorizontalAlignment="Right" Width="63" FontFamily="Rage Italic" FontSize="29.333" FontWeight="ExtraBlack" TextAlignment="Center"/>
+                <TextBox x:Name="TxTZehnDrei" Height="34" Margin="0,386,126,604" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" HorizontalAlignment="Right" Width="63" FontFamily="Rage Italic" FontSize="29.333" FontWeight="ExtraBlack" TextAlignment="Center"/>
+                <TextBox x:Name="TxTBubeEins" HorizontalAlignment="Left" Height="34" Margin="964,417,0,573" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  Width="64"  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" FontFamily="Rage Italic" FontSize="29.333" FontWeight="ExtraBlack" TextAlignment="Center"/>
+                <TextBox x:Name="TxTBubeZwei" Height="34" Margin="0,417,189,573" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" HorizontalAlignment="Right" Width="63" FontFamily="Rage Italic" FontSize="29.333" FontWeight="ExtraBlack" TextAlignment="Center"/>
+                <TextBox x:Name="TxTBubeDrei" Height="34" Margin="0,417,126,573" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" HorizontalAlignment="Right" Width="63" FontFamily="Rage Italic" FontSize="29.333" FontWeight="ExtraBlack" TextAlignment="Center"/>
+                <TextBox x:Name="TxTDameEins" HorizontalAlignment="Left" Height="34" Margin="964,451,0,539" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  Width="64"  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" FontFamily="Rage Italic" FontSize="29.333" FontWeight="ExtraBlack" TextAlignment="Center"/>
+                <TextBox x:Name="TxTDameZwei" Height="34" Margin="0,451,189,539" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" HorizontalAlignment="Right" Width="63" FontFamily="Rage Italic" FontSize="29.333" FontWeight="ExtraBlack" TextAlignment="Center"/>
+                <TextBox x:Name="TxTDameDrei" Height="34" Margin="0,451,126,539" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" HorizontalAlignment="Right" Width="63" FontFamily="Rage Italic" FontSize="29.333" FontWeight="ExtraBlack" TextAlignment="Center"/>
+                <TextBox x:Name="TxTKönigEins" HorizontalAlignment="Left" Height="34" Margin="964,487,0,503" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  Width="64"  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" FontFamily="Rage Italic" FontSize="29.333" FontWeight="ExtraBlack" TextAlignment="Center"/>
+                <TextBox x:Name="TxTKönigZwei" Height="34" Margin="0,487,189,503" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" HorizontalAlignment="Right" Width="63" FontFamily="Rage Italic" FontSize="29.333" FontWeight="ExtraBlack" TextAlignment="Center"/>
+                <TextBox x:Name="TxTKönigDrei" Height="34" Margin="0,487,126,503" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" HorizontalAlignment="Right" Width="63" FontFamily="Rage Italic" FontSize="29.333" FontWeight="ExtraBlack" TextAlignment="Center"/>
+                <TextBox x:Name="TxTAssEins" HorizontalAlignment="Left" Height="34" Margin="964,521,0,469" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  Width="64"  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" FontFamily="Rage Italic" FontSize="29.333" FontWeight="ExtraBlack" TextAlignment="Center"/>
+                <TextBox x:Name="TxTAssZwei" Height="34" Margin="0,521,189,469" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" HorizontalAlignment="Right" Width="63" FontFamily="Rage Italic" FontSize="29.333" FontWeight="ExtraBlack" TextAlignment="Center"/>
+                <TextBox x:Name="TxTAssDrei" Height="34" Margin="0,521,126,469" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" HorizontalAlignment="Right" Width="63" FontFamily="Rage Italic" FontSize="29.333" FontWeight="ExtraBlack" TextAlignment="Center"/>
+                <TextBox x:Name="TxTStraßeEins" HorizontalAlignment="Left" Height="34" Margin="964,552,0,438" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  Width="64"  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" FontFamily="Rage Italic" FontSize="29.333" FontWeight="ExtraBlack" TextAlignment="Center"/>
+                <TextBox x:Name="TxTStraßeZwei" Height="34" Margin="0,552,189,438" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" HorizontalAlignment="Right" Width="63" FontFamily="Rage Italic" FontSize="29.333" FontWeight="ExtraBlack" TextAlignment="Center"/>
+                <TextBox x:Name="TxTStraßeDrei" Height="34" Margin="0,552,126,438" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" HorizontalAlignment="Right" Width="63" FontFamily="Rage Italic" FontSize="29.333" FontWeight="ExtraBlack" TextAlignment="Center"/>
+                <TextBox x:Name="TxTFullHouseEins" HorizontalAlignment="Left" Height="34" Margin="964,586,0,404" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  Width="64"  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" FontFamily="Rage Italic" FontSize="29.333" FontWeight="ExtraBlack" TextAlignment="Center"/>
+                <TextBox x:Name="TxTFullHouseZwei" Height="34" Margin="0,586,189,404" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" HorizontalAlignment="Right" Width="63" FontFamily="Rage Italic" FontSize="29.333" FontWeight="ExtraBlack" TextAlignment="Center"/>
+                <TextBox x:Name="TxTFullHouseDrei" Height="34" Margin="0,586,126,404" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" HorizontalAlignment="Right" Width="63" FontFamily="Rage Italic" FontSize="29.333" FontWeight="ExtraBlack" TextAlignment="Center"/>
+                <TextBox x:Name="TxTPokerEins" HorizontalAlignment="Left" Height="34" Margin="964,621,0,369" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  Width="64"  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" FontFamily="Rage Italic" FontSize="29.333" FontWeight="ExtraBlack" TextAlignment="Center"/>
+                <TextBox x:Name="TxTPokerZwei" Height="34" Margin="0,621,189,369" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" HorizontalAlignment="Right" Width="63" FontFamily="Rage Italic" FontSize="29.333" FontWeight="ExtraBlack" TextAlignment="Center"/>
+                <TextBox x:Name="TxTPokerDrei" Height="34" Margin="0,621,126,369" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" HorizontalAlignment="Right" Width="63" FontFamily="Rage Italic" FontSize="29.333" FontWeight="ExtraBlack" TextAlignment="Center"/>
+                <TextBox x:Name="TxTGrandeEins" HorizontalAlignment="Left" Height="34" Margin="964,652,0,338" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  Width="64"  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" FontFamily="Rage Italic" FontSize="29.333" FontWeight="ExtraBlack" TextAlignment="Center"/>
+                <TextBox x:Name="TxTGrandeZwei" Height="34" Margin="0,652,189,338" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" HorizontalAlignment="Right" Width="63" FontFamily="Rage Italic" FontSize="29.333" FontWeight="ExtraBlack" TextAlignment="Center"/>
+                <TextBox x:Name="TxTGrandeDrei" Height="34" Margin="0,652,126,338" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" HorizontalAlignment="Right" Width="63" FontFamily="Rage Italic" FontSize="29.333" FontWeight="ExtraBlack" TextAlignment="Center"/>
+                <TextBox x:Name="TxTGrandeVier" HorizontalAlignment="Left" Height="34" Margin="964,686,0,304" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  Width="64"  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" FontFamily="Rage Italic" FontSize="29.333" FontWeight="ExtraBlack" TextAlignment="Center"/>
+                <TextBox x:Name="TxTGrandeFuenf" Height="34" Margin="0,686,189,304" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" HorizontalAlignment="Right" Width="63" FontFamily="Rage Italic" FontSize="29.333" FontWeight="ExtraBlack" TextAlignment="Center"/>
+                <TextBox x:Name="TxTGrandeSechs" Height="34" Margin="0,686,126,304" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" HorizontalAlignment="Right" Width="63" FontFamily="Rage Italic" FontSize="29.333" FontWeight="ExtraBlack" TextAlignment="Center"/>
+            </Grid>
+        </StackPanel>
+
+        <StackPanel x:Name="GestricheneTabelle">
+            <Grid x:Name="GestrichenGrid" >
+                <TextBox x:Name="PicNeunEins" Visibility="Collapsed" HorizontalAlignment="Left" Height="34" Margin="964,352,0,638" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  Width="64"  RenderTransformOrigin="0.538,0.667" Background="{x:Null}"/>
+                <TextBox x:Name="PicNeunZwei" Visibility="Collapsed" Height="34" Margin="0,352,189,638" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" HorizontalAlignment="Right" Width="63"/>
+                <TextBox x:Name="PicNeunDrei" Visibility="Collapsed" Height="34" Margin="0,352,126,638" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" HorizontalAlignment="Right" Width="63"/>
+                <TextBox x:Name="PicZehnEins" Visibility="Collapsed" HorizontalAlignment="Left" Height="34" Margin="964,386,0,604" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  Width="64"  RenderTransformOrigin="0.538,0.667" Background="{x:Null}"/>
+                <TextBox x:Name="PicZehnZwei" Visibility="Collapsed" Height="34" Margin="0,386,189,604" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" HorizontalAlignment="Right" Width="63"/>
+                <TextBox x:Name="PicZehnDrei" Visibility="Collapsed" Height="34" Margin="0,386,126,604" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" HorizontalAlignment="Right" Width="63" SelectionOpacity="100"/>
+                <TextBox x:Name="PicBubeEins" Visibility="Collapsed" HorizontalAlignment="Left" Height="34" Margin="964,417,0,573" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  Width="64"  RenderTransformOrigin="0.538,0.667" Background="{x:Null}"/>
+                <TextBox x:Name="PicBubeZwei" Visibility="Collapsed" Height="34" Margin="0,417,189,573" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" HorizontalAlignment="Right" Width="63"/>
+                <TextBox x:Name="PicBubeDrei" Visibility="Collapsed" Height="34" Margin="0,417,126,573" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" HorizontalAlignment="Right" Width="63"/>
+                <TextBox x:Name="PicDameEins" Visibility="Collapsed" HorizontalAlignment="Left" Height="34" Margin="964,451,0,539" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  Width="64"  RenderTransformOrigin="0.538,0.667" Background="{x:Null}"/>
+                <TextBox x:Name="PicDameZwei" Visibility="Collapsed" Height="34" Margin="0,451,189,539" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" HorizontalAlignment="Right" Width="63"/>
+                <TextBox x:Name="PicDameDrei" Visibility="Collapsed" Height="34" Margin="0,451,126,539" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" HorizontalAlignment="Right" Width="63"/>
+                <TextBox x:Name="PicKönigEins" Visibility="Collapsed" HorizontalAlignment="Left" Height="34" Margin="964,487,0,503" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  Width="64"  RenderTransformOrigin="0.538,0.667" Background="{x:Null}"/>
+                <TextBox x:Name="PicKönigZwei" Visibility="Collapsed" Height="34" Margin="0,487,189,503" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" HorizontalAlignment="Right" Width="63"/>
+                <TextBox x:Name="PicKönigDrei" Visibility="Collapsed" Height="34" Margin="0,487,126,503" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" HorizontalAlignment="Right" Width="63"/>
+                <TextBox x:Name="PicAssEins" Visibility="Collapsed" HorizontalAlignment="Left" Height="34" Margin="964,521,0,469" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  Width="64"  RenderTransformOrigin="0.538,0.667" Background="{x:Null}"/>
+                <TextBox x:Name="PicAssZwei" Visibility="Collapsed" Height="34" Margin="0,521,189,469" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" HorizontalAlignment="Right" Width="63"/>
+                <TextBox x:Name="PicAssDrei" Visibility="Collapsed" Height="34" Margin="0,521,126,469" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" HorizontalAlignment="Right" Width="63"/>
+                <TextBox x:Name="PicStraßeEins" Visibility="Collapsed" HorizontalAlignment="Left" Height="34" Margin="964,552,0,438" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  Width="64"  RenderTransformOrigin="0.538,0.667" Background="{x:Null}"/>
+                <TextBox x:Name="PicStraßeZwei" Visibility="Collapsed" Height="34" Margin="0,552,189,438" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" HorizontalAlignment="Right" Width="63"/>
+                <TextBox x:Name="PicStraßeDrei" Visibility="Collapsed" Height="34" Margin="0,552,126,438" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" HorizontalAlignment="Right" Width="63"/>
+                <TextBox x:Name="PicFullHouseEins" Visibility="Collapsed" HorizontalAlignment="Left" Height="34" Margin="964,586,0,404" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  Width="64"  RenderTransformOrigin="0.538,0.667" Background="{x:Null}"/>
+                <TextBox x:Name="PicFullHouseZwei" Visibility="Collapsed" Height="34" Margin="0,586,189,404" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" HorizontalAlignment="Right" Width="63"/>
+                <TextBox x:Name="PicFullHouseDrei" Visibility="Collapsed" Height="34" Margin="0,586,126,404" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" HorizontalAlignment="Right" Width="63"/>
+                <TextBox x:Name="PicPokerEins" Visibility="Collapsed" HorizontalAlignment="Left" Height="34" Margin="964,621,0,369" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  Width="64"  RenderTransformOrigin="0.538,0.667" Background="{x:Null}"/>
+                <TextBox x:Name="PicPokerZwei" Visibility="Collapsed" Height="34" Margin="0,621,189,369" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" HorizontalAlignment="Right" Width="63"/>
+                <TextBox x:Name="PicPokerDrei" Visibility="Collapsed" Height="34" Margin="0,621,126,369" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" HorizontalAlignment="Right" Width="63"/>
+                <TextBox x:Name="PicGrandeEins" Visibility="Collapsed" HorizontalAlignment="Left" Height="34" Margin="964,652,0,338" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  Width="64"  RenderTransformOrigin="0.538,0.667" Background="{x:Null}"/>
+                <TextBox x:Name="PicGrandeZwei" Visibility="Collapsed" Height="34" Margin="0,652,189,338" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" HorizontalAlignment="Right" Width="63"/>
+                <TextBox x:Name="PicGrandeDrei" Visibility="Collapsed" Height="34" Margin="0,652,126,338" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" HorizontalAlignment="Right" Width="63"/>
+                <TextBox x:Name="PicGrandeVier" Visibility="Collapsed" HorizontalAlignment="Left" Height="34" Margin="964,686,0,304" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  Width="64"  RenderTransformOrigin="0.538,0.667" Background="{x:Null}"/>
+                <TextBox x:Name="PicGrandeFuenf" Visibility="Collapsed" Height="34" Margin="0,686,189,304" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" HorizontalAlignment="Right" Width="63"/>
+                <TextBox x:Name="PicGrandeSechs" Visibility="Collapsed" Height="34" Margin="0,686,126,304" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" HorizontalAlignment="Right" Width="63"/>
+
+                <TextBox x:Name="TxTSummeEins" HorizontalAlignment="Left" Height="34" IsEnabled="False" Margin="964,720,0,270" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  Width="64"  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" TextAlignment="Center" FontSize="29.333" FontFamily="Rage Italic" FontWeight="Bold" TextDecorations="Underline"/>
+                <TextBox x:Name="TxTSummeZwei" Height="34" Margin="0,720,189,270" IsEnabled="False" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" HorizontalAlignment="Right" Width="63" TextAlignment="Center" FontSize="29.333" FontFamily="Rage Italic" FontWeight="Bold" TextDecorations="Underline"/>
+                <TextBox x:Name="TxTSummeDrei" Height="34" Margin="0,720,126,270" IsEnabled="False" IsReadOnly="True" Cursor="Arrow" TextWrapping="Wrap" Text=""  RenderTransformOrigin="0.538,0.667" Background="{x:Null}" HorizontalAlignment="Right" Width="63" TextAlignment="Center" FontSize="29.333" FontFamily="Rage Italic" FontWeight="Bold" TextDecorations="Underline"/>
+
+            </Grid>
+
+        </StackPanel>
+
+        <Grid x:Name="grdSpielende" Visibility="Collapsed" >
+            <Grid.Background>
+                <ImageBrush ImageSource="Bilder/Spielende_70.png"/>
+            </Grid.Background>
+            <Label x:Name="Spielende_weiß4" Content="SPIELENDE" HorizontalAlignment="Left" Margin="191,79,0,0" VerticalAlignment="Top" Height="262" Width="962" FontSize="206.667" FontWeight="Bold" FontFamily="Impact" OpacityMask="White" BorderThickness="0" Foreground="White"></Label>
+            <Label x:Name="Spielende_weiß3" Content="SPIELENDE" HorizontalAlignment="Left" Margin="191,69,0,0" VerticalAlignment="Top" Height="262" Width="962" FontSize="206.667" FontWeight="Bold" FontFamily="Impact" OpacityMask="White" BorderThickness="0" BorderBrush="White" Foreground="White"/>
+            <Label x:Name="Spielende_weiß2" Content="SPIELENDE" HorizontalAlignment="Left" Margin="201,69,0,0" VerticalAlignment="Top" Height="262" Width="962" FontSize="206.667" FontWeight="Bold" FontFamily="Impact" OpacityMask="White" BorderThickness="0" BorderBrush="White" Foreground="White"/>
+            <Label x:Name="Spielende_weiß1" Content="SPIELENDE" HorizontalAlignment="Left" Margin="201,79,0,0" VerticalAlignment="Top" Height="262" Width="962" FontSize="206.667" FontWeight="Bold" FontFamily="Impact" OpacityMask="White" BorderThickness="0" BorderBrush="White" Background="{x:Null}" Foreground="White"/>
+            <Label x:Name="Spielende_rot" Content="SPIELENDE" HorizontalAlignment="Left" Margin="196,74,0,0" VerticalAlignment="Top" Height="262" Width="962" FontSize="206.667" FontWeight="Bold" FontFamily="Impact" OpacityMask="White" BorderThickness="0" BorderBrush="White">
+                <Label.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Red" Offset="0"/>
+                        <GradientStop Color="#FF850101" Offset="1"/>
+                    </LinearGradientBrush>
+                </Label.Foreground>
+            </Label>
+
+            <Label x:Name="Punkte" Content="Gesamtpunkte:" HorizontalAlignment="Left" Margin="278,664,0,0" VerticalAlignment="Top" Height="94" Width="782" Foreground="White" FontSize="64" FontFamily="Impact"/>
+            <Label x:Name="lblPunktestand" Content="" HorizontalAlignment="Left" Margin="752,664,0,0" VerticalAlignment="Top" Height="94" Width="468" Foreground="White" FontSize="64" FontFamily="Impact"/>
+
+            <Button Content="" x:Name="btnOk" Style="{StaticResource MoKorrektur}"  RenderTransformOrigin="0.546,0.488" Visibility="Visible" Height="130" Width="320" Cursor="Hand" Margin="397,806,563,78" Click="btnOk_Click"  >
+                <Button.BorderBrush>
+                    <ImageBrush />
+                </Button.BorderBrush>
+                <Button.Background>
+                    <ImageBrush ImageSource="Bilder/startmenue.png"/>
+                </Button.Background>
+            </Button>
+
+        </Grid>
+
+       
+
+    </Grid>
+
+</Window>
+
+    

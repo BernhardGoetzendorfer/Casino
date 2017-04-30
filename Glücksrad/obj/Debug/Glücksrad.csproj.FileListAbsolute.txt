@@ -1,0 +1,58 @@
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Glücksrad\bin\Debug\Sounds\backgroundMusic.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Glücksrad\bin\Debug\Sounds\fail01.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Glücksrad\bin\Debug\Sounds\SpinSound.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Glücksrad\bin\Debug\Sounds\Korrekt.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Glücksrad\bin\Debug\Glücksrad.exe.config
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Glücksrad\bin\Debug\Glücksrad.exe
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Glücksrad\bin\Debug\Glücksrad.pdb
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Glücksrad\bin\Debug\Datenschicht.dll
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Glücksrad\bin\Debug\EntityFramework.dll
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Glücksrad\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Glücksrad\bin\Debug\Highscore.dll
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Glücksrad\bin\Debug\IndividuellesFenster.exe
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Glücksrad\bin\Debug\Tastatur.dll
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Glücksrad\bin\Debug\Datenschicht.pdb
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Glücksrad\bin\Debug\Highscore.pdb
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Glücksrad\bin\Debug\IndividuellesFenster.pdb
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Glücksrad\bin\Debug\Tastatur.pdb
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Glücksrad\bin\Debug\EntityFramework.xml
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Glücksrad\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Glücksrad\obj\Debug\Glücksrad.csprojResolveAssemblyReference.cache
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Glücksrad\obj\Debug\Glücksrad_Fenster.baml
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Glücksrad\obj\Debug\Glücksrad_Fenster.g.cs
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Glücksrad\obj\Debug\App.g.cs
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Glücksrad\obj\Debug\Glücksrad_MarkupCompile.cache
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Glücksrad\obj\Debug\Glücksrad.g.resources
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Glücksrad\obj\Debug\Glücksrad.Properties.Resources.resources
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Glücksrad\obj\Debug\Glücksrad.csproj.GenerateResource.Cache
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Glücksrad\obj\Debug\Glücksrad.exe
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Glücksrad\obj\Debug\Glücksrad.pdb
+C:\Users\Berni\Desktop\SpieleSuite\Glücksrad\bin\Debug\Sounds\backgroundMusic.wav
+C:\Users\Berni\Desktop\SpieleSuite\Glücksrad\bin\Debug\Sounds\fail01.wav
+C:\Users\Berni\Desktop\SpieleSuite\Glücksrad\bin\Debug\Sounds\SpinSound.wav
+C:\Users\Berni\Desktop\SpieleSuite\Glücksrad\bin\Debug\Sounds\Korrekt.wav
+C:\Users\Berni\Desktop\SpieleSuite\Glücksrad\bin\Debug\Glücksrad.exe.config
+C:\Users\Berni\Desktop\SpieleSuite\Glücksrad\bin\Debug\Glücksrad.exe
+C:\Users\Berni\Desktop\SpieleSuite\Glücksrad\bin\Debug\Glücksrad.pdb
+C:\Users\Berni\Desktop\SpieleSuite\Glücksrad\bin\Debug\Datenschicht.dll
+C:\Users\Berni\Desktop\SpieleSuite\Glücksrad\bin\Debug\EntityFramework.dll
+C:\Users\Berni\Desktop\SpieleSuite\Glücksrad\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Berni\Desktop\SpieleSuite\Glücksrad\bin\Debug\Highscore.dll
+C:\Users\Berni\Desktop\SpieleSuite\Glücksrad\bin\Debug\IndividuellesFenster.exe
+C:\Users\Berni\Desktop\SpieleSuite\Glücksrad\bin\Debug\Tastatur.dll
+C:\Users\Berni\Desktop\SpieleSuite\Glücksrad\bin\Debug\Datenschicht.pdb
+C:\Users\Berni\Desktop\SpieleSuite\Glücksrad\bin\Debug\Highscore.pdb
+C:\Users\Berni\Desktop\SpieleSuite\Glücksrad\bin\Debug\IndividuellesFenster.pdb
+C:\Users\Berni\Desktop\SpieleSuite\Glücksrad\bin\Debug\Tastatur.pdb
+C:\Users\Berni\Desktop\SpieleSuite\Glücksrad\bin\Debug\EntityFramework.xml
+C:\Users\Berni\Desktop\SpieleSuite\Glücksrad\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Berni\Desktop\SpieleSuite\Glücksrad\obj\Debug\Glücksrad.csprojResolveAssemblyReference.cache
+C:\Users\Berni\Desktop\SpieleSuite\Glücksrad\obj\Debug\Glücksrad_Fenster.baml
+C:\Users\Berni\Desktop\SpieleSuite\Glücksrad\obj\Debug\Glücksrad_Fenster.g.cs
+C:\Users\Berni\Desktop\SpieleSuite\Glücksrad\obj\Debug\App.g.cs
+C:\Users\Berni\Desktop\SpieleSuite\Glücksrad\obj\Debug\Glücksrad_MarkupCompile.cache
+C:\Users\Berni\Desktop\SpieleSuite\Glücksrad\obj\Debug\Glücksrad.g.resources
+C:\Users\Berni\Desktop\SpieleSuite\Glücksrad\obj\Debug\Glücksrad.Properties.Resources.resources
+C:\Users\Berni\Desktop\SpieleSuite\Glücksrad\obj\Debug\Glücksrad.csproj.GenerateResource.Cache
+C:\Users\Berni\Desktop\SpieleSuite\Glücksrad\obj\Debug\Glücksrad.exe
+C:\Users\Berni\Desktop\SpieleSuite\Glücksrad\obj\Debug\Glücksrad.pdb

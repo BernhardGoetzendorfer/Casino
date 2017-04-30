@@ -1,0 +1,142 @@
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\0.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\1.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\10.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\11.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\12.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\13.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\14.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\15.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\16.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\17.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\18.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\19.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\2.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\20.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\21.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\22.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\23.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\24.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\25.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\26.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\27.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\28.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\29.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\3.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\30.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\31.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\32.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\33.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\34.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\35.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\36.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\4.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\5.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\6.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\7.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\8.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\9.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\JetonSetzten.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\RouletteHintergrund.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\hintergrundNeu2.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\hoechstgewinn.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\roulettekesselSound.wav
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\Roulette0.0.8.exe.config
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\Roulette0.0.8.exe
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\Roulette0.0.8.pdb
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\Datenschicht.dll
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\EntityFramework.dll
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\IndividuellesFenster.exe
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\Tastatur.dll
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\Datenschicht.pdb
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\IndividuellesFenster.pdb
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\Tastatur.pdb
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\EntityFramework.xml
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\obj\Debug\Roulette0.0.8.csprojResolveAssemblyReference.cache
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\obj\Debug\GewinnAusgabe.g.cs
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\obj\Debug\InfoFensterRoulette.g.cs
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\obj\Debug\Roulette.g.cs
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\obj\Debug\App.g.cs
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\obj\Debug\Roulette0.0.8_Content.g.cs
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\obj\Debug\Roulette0.0.8_MarkupCompile.cache
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\obj\Debug\Roulette0.0.8_MarkupCompile.lref
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\obj\Debug\GewinnAusgabe.baml
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\obj\Debug\InfoFensterRoulette.baml
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\obj\Debug\Roulette.baml
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\obj\Debug\Roulette0.0.8.g.resources
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\obj\Debug\Roulette0._0._8.Properties.Resources.resources
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\obj\Debug\Roulette0.0.8.csproj.GenerateResource.Cache
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\obj\Debug\Roulette0.0.8.exe
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Roulette\Roulette0.0.8\obj\Debug\Roulette0.0.8.pdb
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\0.wav
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\1.wav
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\10.wav
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\11.wav
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\12.wav
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\13.wav
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\14.wav
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\15.wav
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\16.wav
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\17.wav
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\18.wav
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\19.wav
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\2.wav
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\20.wav
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\21.wav
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\22.wav
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\23.wav
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\24.wav
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\25.wav
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\26.wav
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\27.wav
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\28.wav
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\29.wav
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\3.wav
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\30.wav
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\31.wav
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\32.wav
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\33.wav
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\34.wav
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\35.wav
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\36.wav
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\4.wav
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\5.wav
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\6.wav
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\7.wav
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\8.wav
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\9.wav
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\JetonSetzten.wav
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\RouletteHintergrund.wav
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\hintergrundNeu2.wav
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\hoechstgewinn.wav
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\RSounds\roulettekesselSound.wav
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\Roulette0.0.8.exe.config
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\Roulette0.0.8.exe
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\Roulette0.0.8.pdb
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\Datenschicht.dll
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\EntityFramework.dll
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\IndividuellesFenster.exe
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\Tastatur.dll
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\Datenschicht.pdb
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\IndividuellesFenster.pdb
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\Tastatur.pdb
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\EntityFramework.xml
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\obj\Debug\Roulette0.0.8.csprojResolveAssemblyReference.cache
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\obj\Debug\GewinnAusgabe.g.cs
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\obj\Debug\InfoFensterRoulette.g.cs
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\obj\Debug\Roulette.g.cs
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\obj\Debug\App.g.cs
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\obj\Debug\Roulette0.0.8_Content.g.cs
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\obj\Debug\Roulette0.0.8_MarkupCompile.cache
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\obj\Debug\Roulette0.0.8_MarkupCompile.lref
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\obj\Debug\GewinnAusgabe.baml
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\obj\Debug\InfoFensterRoulette.baml
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\obj\Debug\Roulette.baml
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\obj\Debug\Roulette0.0.8.g.resources
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\obj\Debug\Roulette0._0._8.Properties.Resources.resources
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\obj\Debug\Roulette0.0.8.csproj.GenerateResource.Cache
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\obj\Debug\Roulette0.0.8.exe
+C:\Users\Berni\Desktop\SpieleSuite\Roulette\Roulette0.0.8\obj\Debug\Roulette0.0.8.pdb

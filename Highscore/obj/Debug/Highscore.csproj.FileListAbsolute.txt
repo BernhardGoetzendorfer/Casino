@@ -1,0 +1,38 @@
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Highscore\bin\Debug\Highscore.dll.config
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Highscore\bin\Debug\Highscore.dll
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Highscore\bin\Debug\Highscore.pdb
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Highscore\bin\Debug\Datenschicht.dll
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Highscore\bin\Debug\EntityFramework.dll
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Highscore\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Highscore\bin\Debug\Datenschicht.pdb
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Highscore\bin\Debug\EntityFramework.xml
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Highscore\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Highscore\obj\Debug\Highscore.csprojResolveAssemblyReference.cache
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Highscore\obj\Debug\ScoreList.g.cs
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Highscore\obj\Debug\Highscore_MarkupCompile.cache
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Highscore\obj\Debug\Highscore_MarkupCompile.lref
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Highscore\obj\Debug\ScoreList.baml
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Highscore\obj\Debug\Highscore.g.resources
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Highscore\obj\Debug\Highscore.Properties.Resources.resources
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Highscore\obj\Debug\Highscore.csproj.GenerateResource.Cache
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Highscore\obj\Debug\Highscore.dll
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Highscore\obj\Debug\Highscore.pdb
+C:\Users\Berni\Desktop\SpieleSuite\Highscore\bin\Debug\Highscore.dll.config
+C:\Users\Berni\Desktop\SpieleSuite\Highscore\bin\Debug\Highscore.dll
+C:\Users\Berni\Desktop\SpieleSuite\Highscore\bin\Debug\Highscore.pdb
+C:\Users\Berni\Desktop\SpieleSuite\Highscore\bin\Debug\Datenschicht.dll
+C:\Users\Berni\Desktop\SpieleSuite\Highscore\bin\Debug\EntityFramework.dll
+C:\Users\Berni\Desktop\SpieleSuite\Highscore\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Berni\Desktop\SpieleSuite\Highscore\bin\Debug\Datenschicht.pdb
+C:\Users\Berni\Desktop\SpieleSuite\Highscore\bin\Debug\EntityFramework.xml
+C:\Users\Berni\Desktop\SpieleSuite\Highscore\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Berni\Desktop\SpieleSuite\Highscore\obj\Debug\Highscore.csprojResolveAssemblyReference.cache
+C:\Users\Berni\Desktop\SpieleSuite\Highscore\obj\Debug\ScoreList.g.cs
+C:\Users\Berni\Desktop\SpieleSuite\Highscore\obj\Debug\Highscore_MarkupCompile.cache
+C:\Users\Berni\Desktop\SpieleSuite\Highscore\obj\Debug\Highscore_MarkupCompile.lref
+C:\Users\Berni\Desktop\SpieleSuite\Highscore\obj\Debug\ScoreList.baml
+C:\Users\Berni\Desktop\SpieleSuite\Highscore\obj\Debug\Highscore.g.resources
+C:\Users\Berni\Desktop\SpieleSuite\Highscore\obj\Debug\Highscore.Properties.Resources.resources
+C:\Users\Berni\Desktop\SpieleSuite\Highscore\obj\Debug\Highscore.csproj.GenerateResource.Cache
+C:\Users\Berni\Desktop\SpieleSuite\Highscore\obj\Debug\Highscore.dll
+C:\Users\Berni\Desktop\SpieleSuite\Highscore\obj\Debug\Highscore.pdb

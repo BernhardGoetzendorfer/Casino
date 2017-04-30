@@ -1,0 +1,38 @@
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Tastatur\Tastatur\bin\Debug\Tastatur.dll.config
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Tastatur\Tastatur\bin\Debug\Tastatur.dll
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Tastatur\Tastatur\bin\Debug\Tastatur.pdb
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Tastatur\Tastatur\bin\Debug\Datenschicht.dll
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Tastatur\Tastatur\bin\Debug\EntityFramework.dll
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Tastatur\Tastatur\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Tastatur\Tastatur\bin\Debug\Datenschicht.pdb
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Tastatur\Tastatur\bin\Debug\EntityFramework.xml
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Tastatur\Tastatur\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Tastatur\Tastatur\obj\Debug\Tastatur.csprojResolveAssemblyReference.cache
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Tastatur\Tastatur\obj\Debug\TastaturHighscore.g.cs
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Tastatur\Tastatur\obj\Debug\Tastatur_MarkupCompile.cache
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Tastatur\Tastatur\obj\Debug\Tastatur_MarkupCompile.lref
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Tastatur\Tastatur\obj\Debug\TastaturHighscore.baml
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Tastatur\Tastatur\obj\Debug\Tastatur.g.resources
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Tastatur\Tastatur\obj\Debug\Tastatur.Properties.Resources.resources
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Tastatur\Tastatur\obj\Debug\Tastatur.csproj.GenerateResource.Cache
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Tastatur\Tastatur\obj\Debug\Tastatur.dll
+C:\Users\manuel.karl\Documents\Visual Studio 2015\Projects\SpieleSuite\Tastatur\Tastatur\obj\Debug\Tastatur.pdb
+C:\Users\Berni\Desktop\SpieleSuite\Tastatur\Tastatur\bin\Debug\Tastatur.dll.config
+C:\Users\Berni\Desktop\SpieleSuite\Tastatur\Tastatur\bin\Debug\Tastatur.dll
+C:\Users\Berni\Desktop\SpieleSuite\Tastatur\Tastatur\bin\Debug\Tastatur.pdb
+C:\Users\Berni\Desktop\SpieleSuite\Tastatur\Tastatur\bin\Debug\Datenschicht.dll
+C:\Users\Berni\Desktop\SpieleSuite\Tastatur\Tastatur\bin\Debug\EntityFramework.dll
+C:\Users\Berni\Desktop\SpieleSuite\Tastatur\Tastatur\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Berni\Desktop\SpieleSuite\Tastatur\Tastatur\bin\Debug\Datenschicht.pdb
+C:\Users\Berni\Desktop\SpieleSuite\Tastatur\Tastatur\bin\Debug\EntityFramework.xml
+C:\Users\Berni\Desktop\SpieleSuite\Tastatur\Tastatur\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Berni\Desktop\SpieleSuite\Tastatur\Tastatur\obj\Debug\Tastatur.csprojResolveAssemblyReference.cache
+C:\Users\Berni\Desktop\SpieleSuite\Tastatur\Tastatur\obj\Debug\TastaturHighscore.g.cs
+C:\Users\Berni\Desktop\SpieleSuite\Tastatur\Tastatur\obj\Debug\Tastatur_MarkupCompile.cache
+C:\Users\Berni\Desktop\SpieleSuite\Tastatur\Tastatur\obj\Debug\Tastatur_MarkupCompile.lref
+C:\Users\Berni\Desktop\SpieleSuite\Tastatur\Tastatur\obj\Debug\TastaturHighscore.baml
+C:\Users\Berni\Desktop\SpieleSuite\Tastatur\Tastatur\obj\Debug\Tastatur.g.resources
+C:\Users\Berni\Desktop\SpieleSuite\Tastatur\Tastatur\obj\Debug\Tastatur.Properties.Resources.resources
+C:\Users\Berni\Desktop\SpieleSuite\Tastatur\Tastatur\obj\Debug\Tastatur.csproj.GenerateResource.Cache
+C:\Users\Berni\Desktop\SpieleSuite\Tastatur\Tastatur\obj\Debug\Tastatur.dll
+C:\Users\Berni\Desktop\SpieleSuite\Tastatur\Tastatur\obj\Debug\Tastatur.pdb
